@@ -86,7 +86,9 @@
     border-bottom:1px solid rgba(255,255,255,.07);
   }
   .site-header .wrap{display:flex;align-items:center;justify-content:space-between;padding-top:16px;padding-bottom:16px;gap:16px;}
-  .brand{display:flex;align-items:center;}
+  .brand{display:flex;align-items:center;gap:12px;}
+  .brand-mark{width:44px;height:44px;flex:none;}
+  .brand-mark svg{width:100%;height:100%;}
   .brand-word{line-height:1.15;}
   .brand-word .b1{font-family:'Playfair Display',serif;font-weight:700;font-size:22px;color:var(--white);letter-spacing:.3px;}
   .brand-word .b1 span{color:var(--gold);}
@@ -130,6 +132,7 @@
     position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
     animation:kenburns 22s ease-in-out infinite alternate;
   }
+  video.hero-bg{animation:none;}
   @keyframes kenburns{from{transform:scale(1);}to{transform:scale(1.08);}}
   .hero-overlay{
     position:absolute;inset:0;
@@ -273,7 +276,8 @@
   footer{background:var(--navy-deep);color:#B9C7CC;padding-top:60px;}
   .foot-grid{display:grid;grid-template-columns:1fr;gap:36px;}
   @media (min-width:760px){ .foot-grid{grid-template-columns:1.3fr 1fr 1fr 1.1fr;} }
-  .foot-brand{margin-bottom:14px;}
+  .foot-brand{margin-bottom:14px;display:flex;align-items:center;gap:10px;}
+  .foot-brand .brand-mark{width:34px;height:34px;}
   .foot-brand .b1{font-family:'Playfair Display',serif;color:#fff;font-weight:700;font-size:19px;}
   .foot-brand .b1 span{color:var(--gold);}
   .foot-tag{font-size:13.5px;line-height:1.6;max-width:280px;color:#93A5AC;}
@@ -317,6 +321,12 @@
 <header class="site-header">
   <div class="wrap">
     <a class="brand" href="#top">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 100 70" xmlns="http://www.w3.org/2000/svg">
+          <path fill="var(--gold)" d="M18 46c-3 0-5.5-2-6.5-4.5-.6-1.5-2-2-3.2-1.3-.8.5-1.8.2-2-.8-.3-1.3.6-2.6 1.9-3.3 2-1.1 3-3.1 2.6-5.2-.3-1.8.9-3.3 2.6-3.1 1 .1 1.8-.5 2-1.5.6-2.6 3-4.3 5.6-3.8 1 .2 2-.3 2.4-1.2 1.6-3.8 5.3-6.3 9.5-6.3 2.6 0 5 .9 6.9 2.5.9.7 2.1.9 3.2.5 2.4-.9 5-1.4 7.7-1.4 8 0 15 4.3 18.8 10.7.5.9 1.5 1.4 2.5 1.3 3.4-.4 6.8 1.1 8.8 3.9.6.9 1.7 1.3 2.7 1 2.5-.7 5.1.6 6 3 .4 1 1.4 1.6 2.4 1.5 1.7-.2 3.2 1.1 3.2 2.8 0 1.3-.9 2.4-2.1 2.7-1.6.4-2.6 2-2.2 3.6.3 1.2-.5 2.4-1.7 2.5-.9.1-1.6.7-1.8 1.6-.5 2-2.3 3.4-4.4 3.4H18z"/>
+          <path fill="var(--navy-deep)" d="M18 46c-3 0-5.5-2-6.5-4.5-.6-1.5-2-2-3.2-1.3-.8.5-1.8.2-2-.8-.3-1.3.6-2.6 1.9-3.3 2-1.1 3-3.1 2.6-5.2-.3-1.8.9-3.3 2.6-3.1 1 .1 1.8-.5 2-1.5.6-2.6 3-4.3 5.6-3.8 1 .2 2-.3 2.4-1.2 1.6-3.8 5.3-6.3 9.5-6.3 2.6 0 5 .9 6.9 2.5.9.7 2.1.9 3.2.5 2.4-.9 5-1.4 7.7-1.4 8 0 15 4.3 18.8 10.7.5.9 1.5 1.4 2.5 1.3 3.4-.4 6.8 1.1 8.8 3.9.6.9 1.7 1.3 2.7 1 2.5-.7 5.1.6 6 3 .4 1 1.4 1.6 2.4 1.5 1.7-.2 3.2 1.1 3.2 2.8 0 1.3-.9 2.4-2.1 2.7-1.6.4-2.6 2-2.2 3.6.3 1.2-.5 2.4-1.7 2.5-.9.1-1.6.7-1.8 1.6-.5 2-2.3 3.4-4.4 3.4H18z" opacity="0"/>
+        </svg>
+      </span>
       <span class="brand-word">
         <span class="b1">Safari<span> Waves</span></span><br>
         <span class="b2">Africa Tours &amp; Travel</span>
@@ -364,7 +374,9 @@
 <!-- Hero -->
 <section class="hero">
   <div class="hero-media">
-    <img class="hero-bg" src="https://commons.wikimedia.org/wiki/Special:FilePath/Maasai-Mara-Typical-Scenery.JPG?width=1800" alt="Wide plains of the Maasai Mara, Kenya">
+    <video class="hero-bg" autoplay muted loop playsinline poster="hero-poster.jpg">
+      <source src="hero-video-optimized.mp4" type="video/mp4">
+    </video>
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <div class="wrap">
@@ -1012,6 +1024,11 @@
     <div class="foot-grid">
       <div>
         <div class="foot-brand">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 100 70" xmlns="http://www.w3.org/2000/svg">
+              <path fill="var(--gold)" d="M18 46c-3 0-5.5-2-6.5-4.5-.6-1.5-2-2-3.2-1.3-.8.5-1.8.2-2-.8-.3-1.3.6-2.6 1.9-3.3 2-1.1 3-3.1 2.6-5.2-.3-1.8.9-3.3 2.6-3.1 1 .1 1.8-.5 2-1.5.6-2.6 3-4.3 5.6-3.8 1 .2 2-.3 2.4-1.2 1.6-3.8 5.3-6.3 9.5-6.3 2.6 0 5 .9 6.9 2.5.9.7 2.1.9 3.2.5 2.4-.9 5-1.4 7.7-1.4 8 0 15 4.3 18.8 10.7.5.9 1.5 1.4 2.5 1.3 3.4-.4 6.8 1.1 8.8 3.9.6.9 1.7 1.3 2.7 1 2.5-.7 5.1.6 6 3 .4 1 1.4 1.6 2.4 1.5 1.7-.2 3.2 1.1 3.2 2.8 0 1.3-.9 2.4-2.1 2.7-1.6.4-2.6 2-2.2 3.6.3 1.2-.5 2.4-1.7 2.5-.9.1-1.6.7-1.8 1.6-.5 2-2.3 3.4-4.4 3.4H18z"/>
+            </svg>
+          </span>
           <span class="b1">Safari<span> Waves</span></span>
         </div>
         <p class="foot-tag">Africa Tours &amp; Travel Ltd &mdash; creating unforgettable East African experiences across Kenya, Zanzibar and Uganda.</p>
@@ -1102,4 +1119,5 @@
 
 </body>
 </html>
+
 
