@@ -1,1 +1,876 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Safari Waves Africa Tours & Travel Ltd | Kenya, Zanzibar & Uganda Holidays</title>
+<meta name="description" content="Affordable family holidays, beach vacations, safaris and group travel across Kenya, Zanzibar and Uganda. Creating unforgettable East African experiences.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0E2F44;
+    --navy-deep:#091C29;
+    --gold:#D9A441;
+    --gold-deep:#B9822E;
+    --teal:#15707E;
+    --teal-deep:#0F5259;
+    --sand:#F6F1E6;
+    --sand-deep:#EDE4D1;
+    --ink:#182530;
+    --ink-soft:#4B5A64;
+    --white:#FFFFFF;
+    --line:#E2D9C4;
+    --radius:14px;
+    --wrap:1180px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:'Manrope',sans-serif;
+    color:var(--ink);
+    background:var(--white);
+    -webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%;display:block;}
+  a{color:inherit;text-decoration:none;}
+  ul{margin:0;padding:0;list-style:none;}
+  h1,h2,h3{font-family:'Fraunces',serif;font-weight:600;margin:0;line-height:1.12;color:var(--navy);}
+  p{margin:0;}
+  .wrap{max-width:var(--wrap);margin:0 auto;padding:0 22px;}
+  section{padding:64px 0;}
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:8px;
+    font-size:13px;font-weight:600;color:var(--teal-deep);
+    background:#E6F1F1;border-radius:99px;padding:6px 14px;
+  }
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:8px;
+    padding:14px 24px;border-radius:99px;font-weight:700;font-size:15px;
+    border:1.5px solid transparent;cursor:pointer;transition:transform .15s ease, box-shadow .15s ease;
+    white-space:nowrap;
+  }
+  .btn:active{transform:scale(.97);}
+  .btn-gold{background:var(--gold);color:var(--navy-deep);}
+  .btn-gold:hover{background:var(--gold-deep);}
+  .btn-outline{background:transparent;color:var(--white);border-color:rgba(255,255,255,.55);}
+  .btn-outline:hover{background:rgba(255,255,255,.12);}
+  .btn-navy{background:var(--navy);color:var(--white);}
+  .btn-navy:hover{background:var(--navy-deep);}
+  .section-head{max-width:560px;margin-bottom:34px;}
+  .section-head .eyebrow{margin-bottom:14px;}
+  .section-head h2{font-size:clamp(26px,4vw,36px);}
+  .section-head p{margin-top:12px;color:var(--ink-soft);font-size:15.5px;line-height:1.6;}
 
+  /* ---------- Top utility bar ---------- */
+  .topbar{
+    background:var(--navy-deep);color:#CBD9DE;font-size:12.5px;
+    padding:8px 0;
+  }
+  .topbar .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;}
+  .topbar-status{display:flex;align-items:center;gap:7px;}
+  .dot{width:7px;height:7px;border-radius:50%;background:#5FD48A;box-shadow:0 0 0 3px rgba(95,212,138,.25);}
+  .topbar-links{display:flex;align-items:center;gap:16px;}
+  .topbar-links a{display:flex;align-items:center;gap:6px;color:#CBD9DE;}
+  .topbar-links svg{width:14px;height:14px;stroke:#CBD9DE;}
+  @media (max-width:620px){ .topbar-links span.hide-mobile{display:none;} }
+
+  /* ---------- Header ---------- */
+  .site-header{
+    position:sticky;top:0;z-index:60;
+    background:var(--navy);
+    border-bottom:1px solid rgba(255,255,255,.07);
+  }
+  .site-header .wrap{display:flex;align-items:center;justify-content:space-between;padding-top:12px;padding-bottom:12px;gap:16px;}
+  .brand{display:flex;align-items:center;gap:11px;}
+  .brand svg{width:46px;height:46px;flex:none;}
+  .brand-word{line-height:1.15;}
+  .brand-word .b1{font-family:'Fraunces',serif;font-weight:700;font-size:17px;color:var(--white);letter-spacing:.2px;}
+  .brand-word .b1 span{color:var(--gold);}
+  .brand-word .b2{font-size:10.5px;letter-spacing:1.5px;color:#A9BBC4;margin-top:1px;}
+  .nav{display:none;}
+  .nav ul{display:flex;align-items:center;gap:28px;}
+  .nav a{color:#E7EEF0;font-size:14.5px;font-weight:600;}
+  .nav a:hover{color:var(--gold);}
+  .header-actions{display:flex;align-items:center;gap:10px;}
+  .icon-btn{
+    width:42px;height:42px;border-radius:11px;background:rgba(255,255,255,.08);
+    display:flex;align-items:center;justify-content:center;border:none;cursor:pointer;
+  }
+  .icon-btn svg{width:19px;height:19px;stroke:var(--gold);}
+  .header-actions .btn-gold{display:none;}
+  @media (min-width:900px){
+    .nav{display:block;}
+    .header-actions .btn-gold{display:inline-flex;}
+    #hamburgerBtn{display:none;}
+  }
+
+  /* mobile nav drawer */
+  .mobile-nav{
+    position:fixed;inset:0;background:var(--navy-deep);z-index:100;
+    transform:translateX(100%);transition:transform .3s ease;
+    overflow-y:auto;
+  }
+  .mobile-nav.open{transform:translateX(0);}
+  .mobile-nav-top{display:flex;justify-content:flex-end;padding:18px 20px;}
+  .mobile-nav-top button{background:none;border:none;cursor:pointer;}
+  .mobile-nav-top svg{width:26px;height:26px;stroke:#fff;}
+  .mobile-nav ul{padding:6px 26px 30px;display:flex;flex-direction:column;}
+  .mobile-nav li{border-bottom:1px solid rgba(255,255,255,.08);}
+  .mobile-nav a{display:block;padding:17px 2px;font-size:18px;font-weight:600;color:#F1F3F4;font-family:'Fraunces',serif;}
+  .mobile-nav .mn-cta{padding:6px 26px 34px;}
+
+  /* ---------- Hero ---------- */
+  .hero{position:relative;padding:0;overflow:hidden;color:#fff;}
+  .hero-media{position:relative;min-height:600px;display:flex;align-items:flex-end;}
+  .hero-bg{
+    position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+    animation:kenburns 22s ease-in-out infinite alternate;
+  }
+  @keyframes kenburns{from{transform:scale(1);}to{transform:scale(1.08);}}
+  .hero-overlay{
+    position:absolute;inset:0;
+    background:linear-gradient(180deg, rgba(9,28,41,.55) 0%, rgba(9,28,41,.55) 40%, rgba(9,28,41,.92) 100%);
+  }
+  .hero-content{position:relative;z-index:2;padding:80px 0 46px;width:100%;}
+  .hero-content .wrap{max-width:760px;}
+  .hero-pin{
+    display:inline-flex;align-items:center;gap:7px;background:rgba(255,255,255,.14);
+    border:1px solid rgba(255,255,255,.28);padding:7px 14px;border-radius:99px;font-size:13px;font-weight:600;
+    backdrop-filter:blur(4px);margin-bottom:18px;
+  }
+  .hero-pin svg{width:14px;height:14px;stroke:var(--gold);}
+  .hero h1{font-size:clamp(32px,6vw,52px);color:#fff;font-weight:600;}
+  .hero-sub{margin-top:16px;font-size:16.5px;line-height:1.65;color:#DCE6E9;max-width:540px;}
+  .hero-ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px;}
+  .hero-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:40px;padding-top:28px;border-top:1px solid rgba(255,255,255,.2);}
+  .hero-stat{display:flex;flex-direction:column;gap:6px;}
+  .hero-stat svg{width:20px;height:20px;stroke:var(--gold);}
+  .hero-stat b{font-family:'Fraunces',serif;font-size:15px;color:#fff;font-weight:600;}
+  .hero-stat span{font-size:12.5px;color:#B9C7CC;}
+  @media (max-width:560px){ .hero-stats{grid-template-columns:1fr;} }
+
+  /* ---------- Country strip ---------- */
+  .flagstrip{background:var(--sand);border-bottom:1px solid var(--line);}
+  .flagstrip .wrap{display:flex;flex-wrap:wrap;gap:10px 26px;align-items:center;justify-content:center;padding:16px 22px;}
+  .flagstrip .fs-item{display:flex;align-items:center;gap:8px;font-size:13.5px;font-weight:700;color:var(--navy);}
+  .flagstrip .flag{font-size:18px;}
+
+  /* ---------- Quick filter pills ---------- */
+  .filterbar{padding:36px 0 0;}
+  .filterbar .wrap{display:flex;gap:10px;overflow-x:auto;padding-bottom:6px;}
+  .pill{
+    flex:none;padding:11px 20px;border-radius:99px;border:1.5px solid var(--line);
+    font-size:14px;font-weight:700;color:var(--ink-soft);background:#fff;cursor:pointer;
+  }
+  .pill.active{background:var(--navy);border-color:var(--navy);color:#fff;}
+
+  /* ---------- Packages ---------- */
+  .packages{padding-top:26px;}
+  .pkg-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:22px;}
+  .pkg-card{
+    border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:#fff;
+    display:flex;flex-direction:column;
+  }
+  .pkg-media{position:relative;aspect-ratio:4/3;overflow:hidden;}
+  .pkg-media img{width:100%;height:100%;object-fit:cover;}
+  .pkg-tag{
+    position:absolute;top:12px;left:12px;background:rgba(9,28,41,.78);color:#fff;
+    font-size:11.5px;font-weight:700;padding:5px 11px;border-radius:99px;letter-spacing:.2px;
+  }
+  .pkg-body{padding:18px 18px 20px;display:flex;flex-direction:column;gap:10px;flex:1;}
+  .pkg-loc{display:flex;align-items:center;gap:5px;font-size:12.5px;color:var(--teal-deep);font-weight:700;}
+  .pkg-loc svg{width:13px;height:13px;stroke:var(--teal-deep);}
+  .pkg-title{font-family:'Fraunces',serif;font-size:19px;color:var(--navy);font-weight:600;}
+  .pkg-includes{font-size:13px;color:var(--ink-soft);line-height:1.55;}
+  .pkg-foot{margin-top:auto;padding-top:12px;border-top:1px dashed var(--line);display:flex;align-items:center;justify-content:space-between;gap:8px;}
+  .pkg-price{font-size:12px;color:var(--ink-soft);}
+  .pkg-price b{display:block;font-family:'Fraunces',serif;font-size:17px;color:var(--navy);font-weight:600;}
+  .pkg-link{display:flex;align-items:center;gap:5px;font-size:13.5px;font-weight:700;color:var(--teal-deep);}
+  .pkg-link svg{width:14px;height:14px;stroke:var(--teal-deep);transition:transform .15s ease;}
+  .pkg-card:hover .pkg-link svg{transform:translateX(3px);}
+  .pkg-duration{font-size:11.5px;font-weight:700;color:var(--navy);background:var(--sand);padding:4px 9px;border-radius:6px;align-self:flex-start;}
+
+  /* ---------- About / Mission ---------- */
+  .about{background:var(--navy);color:#fff;}
+  .about-grid{display:grid;grid-template-columns:1fr;gap:40px;align-items:start;}
+  @media (min-width:880px){ .about-grid{grid-template-columns:1fr 1fr;} }
+  .about .eyebrow{background:rgba(217,164,65,.16);color:var(--gold);}
+  .about h2{color:#fff;font-size:clamp(26px,4vw,34px);margin-top:14px;}
+  .about-copy{margin-top:16px;color:#C8D3D8;font-size:15.5px;line-height:1.7;max-width:480px;}
+  .about-quote{
+    margin-top:22px;font-family:'Fraunces',serif;font-style:italic;font-size:17px;color:var(--gold);
+    border-left:3px solid var(--gold);padding-left:14px;
+  }
+  .mvp{display:flex;flex-direction:column;gap:14px;}
+  .mvp-item{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:var(--radius);padding:20px;display:flex;gap:14px;}
+  .mvp-icon{width:42px;height:42px;border-radius:10px;background:rgba(217,164,65,.14);display:flex;align-items:center;justify-content:center;flex:none;}
+  .mvp-icon svg{width:20px;height:20px;stroke:var(--gold);}
+  .mvp-item h3{color:#fff;font-size:16.5px;font-weight:600;margin-bottom:5px;}
+  .mvp-item p{color:#B9C7CC;font-size:13.8px;line-height:1.55;}
+
+  /* ---------- Destinations ---------- */
+  .destinations{background:var(--sand);}
+  .dest-grid{display:grid;grid-template-columns:1fr;gap:18px;}
+  @media (min-width:640px){ .dest-grid{grid-template-columns:1fr 1fr;} }
+  .dest-card{position:relative;border-radius:var(--radius);overflow:hidden;min-height:260px;display:flex;align-items:flex-end;}
+  .dest-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+  .dest-card::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(9,28,41,0) 30%,rgba(9,28,41,.88) 100%);}
+  .dest-info{position:relative;z-index:2;padding:22px;color:#fff;}
+  .dest-info .eyebrow{background:rgba(255,255,255,.16);color:#fff;margin-bottom:8px;}
+  .dest-info h3{font-family:'Fraunces',serif;font-size:22px;color:#fff;font-weight:600;}
+  .dest-info p{margin-top:6px;font-size:13.5px;color:#DCE6E9;max-width:320px;line-height:1.5;}
+
+  /* ---------- Why travel with us ---------- */
+  .why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:18px;}
+  .why-card{border:1px solid var(--line);border-radius:var(--radius);padding:24px 20px;text-align:left;}
+  .why-icon{width:44px;height:44px;border-radius:11px;background:var(--sand);display:flex;align-items:center;justify-content:center;margin-bottom:14px;}
+  .why-icon svg{width:21px;height:21px;stroke:var(--teal-deep);}
+  .why-card h3{font-size:15.5px;font-weight:700;font-family:'Manrope',sans-serif;color:var(--navy);margin-bottom:6px;}
+  .why-card p{font-size:13px;color:var(--ink-soft);line-height:1.55;}
+
+  /* ---------- Services ---------- */
+  .services{background:var(--teal);color:#fff;}
+  .services-grid{display:grid;grid-template-columns:1fr;gap:36px;}
+  @media (min-width:880px){ .services-grid{grid-template-columns:.85fr 1.15fr;align-items:center;} }
+  .services h2{color:#fff;font-size:clamp(26px,4vw,32px);}
+  .services .eyebrow{background:rgba(255,255,255,.16);color:#fff;}
+  .services-copy{margin-top:14px;color:#DCEEEF;font-size:15px;line-height:1.65;max-width:420px;}
+  .services-list{display:grid;grid-template-columns:1fr 1fr;gap:12px 20px;}
+  .services-list li{display:flex;align-items:center;gap:10px;font-size:14px;font-weight:600;padding:12px 4px;border-bottom:1px solid rgba(255,255,255,.16);}
+  .services-list svg{width:16px;height:16px;stroke:var(--gold);flex:none;}
+  @media (max-width:520px){ .services-list{grid-template-columns:1fr;} }
+
+  /* ---------- CTA banner ---------- */
+  .cta-banner{background:var(--gold);}
+  .cta-inner{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:22px;}
+  .cta-inner h2{font-size:clamp(22px,3.4vw,30px);color:var(--navy-deep);max-width:480px;}
+  .cta-inner p{margin-top:8px;color:#5A4419;font-size:14.5px;}
+  .cta-actions{display:flex;flex-wrap:wrap;gap:12px;}
+
+  /* ---------- Footer ---------- */
+  footer{background:var(--navy-deep);color:#B9C7CC;padding-top:60px;}
+  .foot-grid{display:grid;grid-template-columns:1fr;gap:36px;}
+  @media (min-width:760px){ .foot-grid{grid-template-columns:1.3fr 1fr 1fr 1.1fr;} }
+  .foot-brand{display:flex;align-items:center;gap:11px;margin-bottom:14px;}
+  .foot-brand svg{width:40px;height:40px;}
+  .foot-brand .b1{font-family:'Fraunces',serif;color:#fff;font-weight:700;font-size:16px;}
+  .foot-brand .b1 span{color:var(--gold);}
+  .foot-tag{font-size:13.5px;line-height:1.6;max-width:280px;color:#93A5AC;}
+  .foot-flags{display:flex;gap:8px;margin-top:16px;font-size:20px;}
+  footer h4{color:#fff;font-size:13.5px;letter-spacing:.3px;margin-bottom:16px;font-family:'Manrope',sans-serif;}
+  footer ul li{margin-bottom:11px;font-size:13.8px;}
+  footer ul li a:hover{color:var(--gold);}
+  .foot-contact li{display:flex;align-items:flex-start;gap:9px;}
+  .foot-contact svg{width:15px;height:15px;stroke:var(--gold);margin-top:2px;flex:none;}
+  .foot-bottom{border-top:1px solid rgba(255,255,255,.09);margin-top:44px;padding:22px 0 26px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;font-size:12.5px;color:#7C8D94;}
+  .foot-bottom em{color:var(--gold);font-style:normal;font-weight:700;}
+
+  /* ---------- Floating WhatsApp ---------- */
+  .wa-float{
+    position:fixed;right:18px;bottom:20px;z-index:80;
+    width:56px;height:56px;border-radius:50%;background:#25D366;
+    display:flex;align-items:center;justify-content:center;
+    box-shadow:0 8px 20px rgba(0,0,0,.25);
+  }
+  .wa-float svg{width:28px;height:28px;fill:#fff;}
+
+  @media (min-width:900px){
+    .hero-content .wrap{max-width:640px;}
+  }
+</style>
+</head>
+<body>
+
+<!-- Top utility bar -->
+<div class="topbar">
+  <div class="wrap">
+    <div class="topbar-status"><span class="dot"></span> Karibu! We're open</div>
+    <div class="topbar-links">
+      <a href="tel:+254700000000"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span class="hide-mobile">+254 700 000 000</span></a>
+      <a href="mailto:bookings@safariwavesafrica.com" class="hide-mobile">bookings@safariwavesafrica.com</a>
+    </div>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="#top">
+      <svg viewBox="0 0 60 60" fill="none">
+        <circle cx="30" cy="30" r="29" fill="#0A2333" stroke="#D9A441" stroke-width="1.5"/>
+        <path d="M30 10 L30 4 M20 13 L16 8 M40 13 L44 8" stroke="#D9A441" stroke-width="2" stroke-linecap="round"/>
+        <circle cx="30" cy="22" r="7" fill="none" stroke="#D9A441" stroke-width="2"/>
+        <path d="M12 36c3-3 6-3 9 0s6 3 9 0 6-3 9 0 6 3 9 0" stroke="#F6F1E6" stroke-width="2" fill="none" stroke-linecap="round"/>
+        <path d="M12 44c3-3 6-3 9 0s6 3 9 0 6-3 9 0 6 3 9 0" stroke="#15707E" stroke-width="2" fill="none" stroke-linecap="round"/>
+      </svg>
+      <span class="brand-word">
+        <span class="b1">Safari<span> Waves</span></span><br>
+        <span class="b2">AFRICA TOURS &amp; TRAVEL</span>
+      </span>
+    </a>
+
+    <nav class="nav">
+      <ul>
+        <li><a href="#packages">Packages</a></li>
+        <li><a href="#destinations">Destinations</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-actions">
+      <a class="btn btn-gold" href="https://wa.me/254700000000?text=Hi%20Safari%20Waves%2C%20I%27d%20like%20a%20quote%20for%20a%20trip." >Get a Quote</a>
+      <button id="hamburgerBtn" class="icon-btn" aria-label="Open menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile nav drawer -->
+<div class="mobile-nav" id="mobileNav">
+  <div class="mobile-nav-top">
+    <button id="closeNavBtn" aria-label="Close menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+  </div>
+  <ul>
+    <li><a href="#packages">Packages</a></li>
+    <li><a href="#destinations">Destinations</a></li>
+    <li><a href="#about">About Us</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="mn-cta">
+    <a class="btn btn-gold" style="width:100%" href="https://wa.me/254700000000?text=Hi%20Safari%20Waves%2C%20I%27d%20like%20a%20quote%20for%20a%20trip.">Chat with us on WhatsApp</a>
+  </div>
+</div>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-media">
+    <img class="hero-bg" src="https://commons.wikimedia.org/wiki/Special:FilePath/Maasai-Mara-Typical-Scenery.JPG?width=1800" alt="Wide plains of the Maasai Mara, Kenya">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="wrap">
+        <span class="hero-pin">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Kenya &middot; Zanzibar &middot; Uganda
+        </span>
+        <h1>Creating unforgettable East African experiences</h1>
+        <p class="hero-sub">Affordable family holidays, beach getaways, safaris, church group travel and corporate retreats &mdash; planned and guided by a team that knows this region inside out.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-gold" href="#packages">Browse packages</a>
+          <a class="btn btn-outline" href="https://wa.me/254700000000?text=Hi%20Safari%20Waves%2C%20I%27d%20like%20a%20quote%20for%20a%20trip.">Plan my trip</a>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            <b>From KSh 50,000</b><span>per person, all-inclusive</span>
+          </div>
+          <div class="hero-stat">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20 15 15 0 0 1 0-20z"/></svg>
+            <b>3 countries</b><span>Kenya, Zanzibar &amp; Uganda</span>
+          </div>
+          <div class="hero-stat">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 22s8-4.5 8-11V5l-8-3-8 3v6c0 6.5 8 11 8 11z"/></svg>
+            <b>24/7 support</b><span>from booking to touchdown</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Country strip -->
+<div class="flagstrip">
+  <div class="wrap">
+    <span class="fs-item"><span class="flag">🇰🇪</span> Kenya</span>
+    <span class="fs-item"><span class="flag">🇹🇿</span> Zanzibar</span>
+    <span class="fs-item"><span class="flag">🇺🇬</span> Uganda</span>
+    <span class="fs-item">Safe travel &amp; trusted service</span>
+    <span class="fs-item">Memorable experiences</span>
+  </div>
+</div>
+
+<!-- Packages -->
+<section class="packages" id="packages">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Tour packages</span>
+      <h2>One region, endless experiences</h2>
+      <p>Ten curated packages across Kenya, Zanzibar and Uganda, plus family bundles for groups travelling together. Prices are per person unless stated.</p>
+    </div>
+
+    <div class="filterbar" style="padding:0 0 26px;">
+      <div class="wrap" style="padding:0;">
+        <button class="pill active" data-filter="all">All packages</button>
+        <button class="pill" data-filter="kenya">Kenya</button>
+        <button class="pill" data-filter="zanzibar">Zanzibar</button>
+        <button class="pill" data-filter="uganda">Uganda</button>
+        <button class="pill" data-filter="family">Family &amp; groups</button>
+      </div>
+    </div>
+
+    <div class="pkg-grid" id="pkgGrid">
+
+      <!-- Mombasa Budget Escape -->
+      <article class="pkg-card" data-cat="kenya beach">
+        <div class="pkg-media">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Pirates_beach_Mombasa_Kenya.jpg?width=800" alt="Beach in Mombasa, Kenya">
+          <span class="pkg-tag">Beach escape</span>
+        </div>
+        <div class="pkg-body">
+          <span class="pkg-duration">3 Days / 2 Nights</span>
+          <div class="pkg-loc"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Mombasa, Kenya</div>
+          <h3 class="pkg-title">Mombasa Budget Escape</h3>
+          <p class="pkg-includes">SGR return (economy), 2 nights accommodation, daily breakfast, Bamburi city tour &amp; transfers.</p>
+          <div class="pkg-foot">
+            <div class="pkg-price">From<b>KSh 50,000</b></div>
+            <a class="pkg-link" href="https://wa.me/254700000000?text=Hi%20Safari%20Waves%2C%20I%27m%20interested%20in%20the%20Mombasa%20Budget%20Escape.">Enquire <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Nairobi City Experience -->
+      <article class="pkg-card" data-cat="kenya">
+        <div class="pkg-media">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi_City_Skyline.jpg?width=800" alt="Nairobi city skyline, Kenya">
+          <span class="pkg-tag">City break</span>
+        </div>
+        <div class="pkg-body">
+          <span class="pkg-duration">3 Days / 2 Nights</span>
+          <div class="pkg-loc"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Nairobi, Kenya</div>
+          <h3 class="pkg-title">Nairobi City Experience</h3>
+          <p class="pkg-includes">Hotel accommodation, Giraffe Centre, Nairobi National Park, city tour &amp; transfers.</p>
+          <div class="pkg-foot">
+            <div class="pkg-price">From<b>KSh 50,000</b></div>
+            <a class="pkg-link" href="https://wa.me/254700000000?text=Hi%20Safari%20Waves%2C%20I%27m%20interested%20in%20the%20Nairobi%20City%20Experience.">Enquire <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Maasai Mara Safari -->
+      <article class="pkg-card" data-cat="kenya">
+        <div class="pkg-media">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Lions_Family_Portrait_Masai_Mara.jpg?width=800" alt="Lions resting in the Maasai Mara, Kenya">
+          <span class="pkg-tag">Safari</span>
+        </div>
+        <div class="pkg-body">
+          <span class="pkg-duration">3 Days / 2 Nights</span>
+          <div class="pkg-loc"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Maasai Mara, Kenya</div>
+          <h3 class="pkg-title">Maasai Mara Safari</h3>
+          <p class="pkg-includes">4x4 safari van transport, accommodation, all meals, game drives &amp; park fees.</p>
+          <div class="pkg-foot">
+            <div class="pkg-price">From<b>KSh 55,000</b></div>
+            <a class="pkg-link" href="https://wa.me/254700000000?text=Hi%20Safari%20Waves%2C%20I%27m%20interested%20in%20the%20Maasai%20Mara%20Safari.">Enquire <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Kampala Explorer -->
+      <article class="pkg-card" data-cat="uganda">
+        <div class="pkg-media">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Skyline_of_Kampala.jpg?width=800" alt="Kampala city skyline, Uganda">
+          <span class="pkg-tag">City break</span>
+        </div>
+        <div class="pkg-body">
+          <span class="pkg-duration">3 Days / 2 Nights</span>
+          <div class="pkg-loc"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Kampala, Uganda</div>
+          <h3 class="pkg-title">Kampala Explorer</h3>
+          <p class="pkg-includes">Road transport or flight option, hotel accommodation, Kampala city tour, Source of the Nile excursion &amp; breakfast.</p>
+          <div class="pkg-foot">
+            <div class="pkg-price">From<b>KSh 60,000</b></div>
+            <a class="pkg-link" href="https://wa.me/254700000000?text=Hi%20Safari%20Waves%2C%20I%27m%20interested%20in%20the%20Kampala%20Explorer.">Enquire <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Jinja Adventure -->
+      <article class="pkg-card" data-cat="uganda">
+        <div class="pkg-media">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Source_of_Nile,_Spring_at_Jinja,_Lake_Victoria.jpg?width=800" alt="Source of the Nile at Jinja, Uganda">
+          <span class="pkg-tag">Adventure</span>
+        </div>
+        <div class="pkg-body">
+          <span class="pkg-duration">3 Days / 2 Nights</span>
+          <div class="pkg-loc"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Jinja, Uganda</div>
+          <h3 class="pkg-title">Jinja Adventure</h3>
+          <p class="pkg-includes">Hotel accommodation, Source of the Nile boat cruise, transport &amp; daily breakfast.</p>
+          <div class="pkg-foot">
+            <div class="pkg-price">From<b>KSh 65,000</b></div>
+            <a class="pkg-link" href="https://wa.me/254700000000?text=Hi%20Safari%20Waves%2C%20I%27m%20interested%20in%20the%20Jinja%20Adventure.">Enquire <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Mombasa Holiday Package -->
+      <article class="pkg-card" data-cat="kenya beach">
+        <div class="pkg-media">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Diani_Beach,_Mombasa,_Kenya.jpg?width=800" alt="Diani Beach, Mombasa, Kenya">
+          <span class="pkg-tag">Beach holiday</span>
+        </div>
+        <div class="pkg-body">
+          <span class="pkg-duration">5 Days / 4 Nights</span>
+          <div class="pkg-loc"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Mombasa, Kenya</div>
+          <h3 class="pkg-title">Mombasa Holiday Package</h3>
+          <p class="pkg-includes">SGR return, 4 nights accommodation, breakfast &amp; dinner, Wild Waters, Fort Jesus &amp; transfers.</p>
+          <div class="pkg-foot">
+            <div class="pkg-price">From<b>KSh 75,000</b></div>
+            <a class="pkg-link" href="https://wa.me/254700000000?text=Hi%20Safari%20Waves%2C%20I%27m%20interested%20in%20the%20Mombasa%20Holiday%20Package.">Enquire <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Zanzibar Budget Getaway -->
+      <article class="pkg-card" data-cat="zanzibar beach">
+        <div class="pkg-media">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/White_sandy_beach_at_Nungwi,_Zanzibar.jpg?width=800" alt="White sand beach at Nungwi, Zanzibar">
+          <span class="pkg-tag">Beach getaway</span>
+        </div>
+        <div class="pkg-body">
+          <span class="pkg-duration">4 Days / 3 Nights</span>
+          <div class="pkg-loc"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Zanzibar, Tanzania</div>
+          <h3 class="pkg-title">Zanzibar Budget Getaway</h3>
+          <p class="pkg-includes">Return flights from Nairobi, daily breakfast, airport transfers &amp; Stone Town tour.</p>
+          <div class="pkg-foot">
+            <div class="pkg-price">From<b>KSh 85,000</b></div>
+            <a class="pkg-link" href="https://wa.me/254700000000?text=Hi%20Safari%20Waves%2C%20I%27m%20interested%20in%20the%20Zanzibar%20Budget%20Getaway.">Enquire <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Zanzibar Beach Escape -->
+      <article class="pkg-card" data-cat="zanzibar beach">
+        <div class="pkg-media">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Pongwe_Beach_Zanzibar.jpg?width=800" alt="Pongwe Beach, Zanzibar">
+          <span class="pkg-tag">Beach escape</span>
+        </div>
+        <div class="pkg-body">
+          <span class="pkg-duration">5 Days / 4 Nights</span>
+          <div class="pkg-loc"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Zanzibar, Tanzania</div>
+          <h3 class="pkg-title">Zanzibar Beach Escape</h3>
+          <p class="pkg-includes">Return flights, beach resort accommodation, breakfast &amp; dinner, spice tour, sunset dhow cruise.</p>
+          <div class="pkg-foot">
+            <div class="pkg-price">From<b>KSh 120,000</b></div>
+            <a class="pkg-link" href="https://wa.me/254700000000?text=Hi%20Safari%20Waves%2C%20I%27m%20interested%20in%20the%20Zanzibar%20Beach%20Escape.">Enquire <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Zanzibar Honeymoon -->
+      <article class="pkg-card" data-cat="zanzibar beach">
+        <div class="pkg-media">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Forodhani_Gardens_Sea_Front_Sunset_-_Zanzibar.jpg?width=800" alt="Sunset over Zanzibar's Stone Town">
+          <span class="pkg-tag">Honeymoon</span>
+        </div>
+        <div class="pkg-body">
+          <span class="pkg-duration">5 Days / 4 Nights</span>
+          <div class="pkg-loc"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Zanzibar, Tanzania</div>
+          <h3 class="pkg-title">Zanzibar Honeymoon Package</h3>
+          <p class="pkg-includes">Return flights, beachfront accommodation, romantic dinner, selected excursions &amp; transfers.</p>
+          <div class="pkg-foot">
+            <div class="pkg-price">From<b>KSh 150,000</b><span style="font-size:11px;font-weight:600;">per couple</span></div>
+            <a class="pkg-link" href="https://wa.me/254700000000?text=Hi%20Safari%20Waves%2C%20I%27m%20interested%20in%20the%20Zanzibar%20Honeymoon%20Package.">Enquire <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Uganda Gorilla Trekking -->
+      <article class="pkg-card" data-cat="uganda">
+        <div class="pkg-media">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Mountain_gorilla,_2-year-old,_Mubare_Group,_Buhoma,_Bwindi_Impenetrable_Forest,_Uganda.jpg?width=800" alt="Mountain gorilla in Bwindi Impenetrable Forest, Uganda">
+          <span class="pkg-tag">Wildlife</span>
+        </div>
+        <div class="pkg-body">
+          <span class="pkg-duration">4 Days / 3 Nights</span>
+          <div class="pkg-loc"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Bwindi, Uganda</div>
+          <h3 class="pkg-title">Uganda Gorilla Trekking</h3>
+          <p class="pkg-includes">Gorilla trekking permit, accommodation, all meals, professional guide &amp; ground transport. Permits are limited &mdash; book early.</p>
+          <div class="pkg-foot">
+            <div class="pkg-price">From<b>KSh 220,000</b></div>
+            <a class="pkg-link" href="https://wa.me/254700000000?text=Hi%20Safari%20Waves%2C%20I%27m%20interested%20in%20Uganda%20Gorilla%20Trekking.">Enquire <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Family of 4 -->
+      <article class="pkg-card" data-cat="family kenya beach">
+        <div class="pkg-media">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Diani_Beach,_Mombasa,_Kenya.jpg?width=800" alt="Family beach holiday at the Kenya coast">
+          <span class="pkg-tag">Family of 4</span>
+        </div>
+        <div class="pkg-body">
+          <span class="pkg-duration">Kenya Coast</span>
+          <div class="pkg-loc"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Coast, Kenya</div>
+          <h3 class="pkg-title">Family of 4 Coast Package</h3>
+          <p class="pkg-includes">SGR return, apartment accommodation, breakfast, beach &amp; pool access, selected activities &amp; transfers.</p>
+          <div class="pkg-foot">
+            <div class="pkg-price">From<b>KSh 180,000</b><span style="font-size:11px;font-weight:600;">per family</span></div>
+            <a class="pkg-link" href="https://wa.me/254700000000?text=Hi%20Safari%20Waves%2C%20I%27m%20interested%20in%20the%20Family%20of%204%20Coast%20Package.">Enquire <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Family of 8 -->
+      <article class="pkg-card" data-cat="family kenya beach">
+        <div class="pkg-media">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Pirates_beach_Mombasa_Kenya.jpg?width=800" alt="Group beach holiday at the Kenya coast">
+          <span class="pkg-tag">Family of 8</span>
+        </div>
+        <div class="pkg-body">
+          <span class="pkg-duration">Kenya Coast</span>
+          <div class="pkg-loc"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Coast, Kenya</div>
+          <h3 class="pkg-title">Family of 8 Coast Package</h3>
+          <p class="pkg-includes">SGR return, family accommodation, breakfast, beach &amp; pool access, selected excursions &amp; transfers.</p>
+          <div class="pkg-foot">
+            <div class="pkg-price">From<b>KSh 350,000</b><span style="font-size:11px;font-weight:600;">per family</span></div>
+            <a class="pkg-link" href="https://wa.me/254700000000?text=Hi%20Safari%20Waves%2C%20I%27m%20interested%20in%20the%20Family%20of%208%20Coast%20Package.">Enquire <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- About -->
+<section class="about" id="about">
+  <div class="wrap">
+    <div class="about-grid">
+      <div>
+        <span class="eyebrow">Welcome to Safari Waves Africa</span>
+        <h2>We handle the details, you enjoy the journey</h2>
+        <p class="about-copy">We are a premier East African tour operator offering unforgettable travel experiences across Kenya, Mombasa, Zanzibar and Uganda &mdash; from family holidays and beach vacations to safaris, church group travel and corporate retreats.</p>
+        <p class="about-quote">&ldquo;Your Journey, Our Passion&rdquo;</p>
+      </div>
+      <div class="mvp">
+        <div class="mvp-item">
+          <div class="mvp-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div>
+          <div>
+            <h3>Our Vision</h3>
+            <p>To be the most trusted and preferred tour company in East Africa.</p>
+          </div>
+        </div>
+        <div class="mvp-item">
+          <div class="mvp-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div>
+          <div>
+            <h3>Our Mission</h3>
+            <p>To deliver exceptional travel experiences that connect people with the beauty, cultures and adventures of East Africa through reliable, professional and personalized service.</p>
+          </div>
+        </div>
+        <div class="mvp-item">
+          <div class="mvp-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg></div>
+          <div>
+            <h3>Our Promise</h3>
+            <p>Best value, quality service, safety and customer satisfaction on every trip.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Destinations -->
+<section class="destinations" id="destinations">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Explore our destinations</span>
+      <h2>Four places, one unforgettable region</h2>
+    </div>
+    <div class="dest-grid">
+      <div class="dest-card">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi_City_Skyline.jpg?width=900" alt="Nairobi, Kenya">
+        <div class="dest-info"><span class="eyebrow">Kenya</span><h3>Kenya</h3><p>From vibrant city life to world-famous safaris and pristine beaches.</p></div>
+      </div>
+      <div class="dest-card">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Diani_Beach,_Mombasa,_Kenya.jpg?width=900" alt="Mombasa, Kenya">
+        <div class="dest-info"><span class="eyebrow">Coast</span><h3>Mombasa</h3><p>Sun, sand and sea on Kenya's stunning coastline.</p></div>
+      </div>
+      <div class="dest-card">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/White_sandy_beach_at_Nungwi,_Zanzibar.jpg?width=900" alt="Zanzibar, Tanzania">
+        <div class="dest-info"><span class="eyebrow">Tanzania</span><h3>Zanzibar</h3><p>Exotic beaches, rich culture and historic Stone Town.</p></div>
+      </div>
+      <div class="dest-card">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Mountain_gorilla,_2-year-old,_Mubare_Group,_Buhoma,_Bwindi_Impenetrable_Forest,_Uganda.jpg?width=900" alt="Uganda">
+        <div class="dest-info"><span class="eyebrow">Uganda</span><h3>Uganda</h3><p>The Pearl of Africa &mdash; adventure, wildlife and breathtaking landscapes.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Why travel with us -->
+<section class="why">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Why travel with us</span>
+      <h2>Trusted by families, groups &amp; companies</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+        <h3>Affordable prices</h3>
+        <p>Packages starting from KSh 50,000, built to fit real budgets.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+        <h3>Experienced team</h3>
+        <p>Local guides and planners who know East Africa firsthand.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 22s8-4.5 8-11V5l-8-3-8 3v6c0 6.5 8 11 8 11z"/><path d="M9 12l2 2 4-4"/></svg></div>
+        <h3>Trusted &amp; reliable</h3>
+        <p>Clear pricing, confirmed bookings and dependable service.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+        <h3>24/7 customer support</h3>
+        <p>Real help before, during and after your trip.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M4 21V9a2 2 0 0 1 2-2h3V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2h3a2 2 0 0 1 2 2v12"/><path d="M9 21v-4h6v4M9 9h.01M15 9h.01M9 13h.01M15 13h.01"/></svg></div>
+        <h3>Customized itineraries</h3>
+        <p>Every package can be tailored to your group and dates.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services -->
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="services-grid">
+      <div>
+        <span class="eyebrow">What we handle</span>
+        <h2>Every part of the journey, covered</h2>
+        <p class="services-copy">We handle the details, you enjoy the journey &mdash; from the first flight booking to the last airport transfer.</p>
+      </div>
+      <ul class="services-list">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>Hotel reservations</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>Airport transfers</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>Holiday packages</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>Flight booking assistance</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>Visa support</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>Car hire</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>Conference &amp; retreat planning</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>Group travel &amp; tour guides</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Banner -->
+<section class="cta-banner">
+  <div class="wrap cta-inner">
+    <div>
+      <h2>Ready to plan your East African getaway?</h2>
+      <p>Tell us your dates, group size and budget &mdash; we'll put a package together within hours.</p>
+    </div>
+    <div class="cta-actions">
+      <a class="btn btn-navy" href="https://wa.me/254700000000?text=Hi%20Safari%20Waves%2C%20I%27d%20like%20a%20quote%20for%20a%20trip.">Chat on WhatsApp</a>
+      <a class="btn btn-outline" style="border-color:var(--navy-deep);color:var(--navy-deep);" href="tel:+254700000000">Call us</a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer id="contact">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">
+          <svg viewBox="0 0 60 60" fill="none">
+            <circle cx="30" cy="30" r="29" fill="#0A2333" stroke="#D9A441" stroke-width="1.5"/>
+            <circle cx="30" cy="22" r="7" fill="none" stroke="#D9A441" stroke-width="2"/>
+            <path d="M12 36c3-3 6-3 9 0s6 3 9 0 6-3 9 0 6 3 9 0" stroke="#F6F1E6" stroke-width="2" fill="none" stroke-linecap="round"/>
+            <path d="M12 44c3-3 6-3 9 0s6 3 9 0 6-3 9 0 6 3 9 0" stroke="#15707E" stroke-width="2" fill="none" stroke-linecap="round"/>
+          </svg>
+          <span class="b1">Safari<span> Waves</span></span>
+        </div>
+        <p class="foot-tag">Africa Tours &amp; Travel Ltd &mdash; creating unforgettable East African experiences across Kenya, Zanzibar and Uganda.</p>
+        <div class="foot-flags">🇰🇪 🇹🇿 🇺🇬</div>
+      </div>
+
+      <div>
+        <h4>QUICK LINKS</h4>
+        <ul>
+          <li><a href="#packages">Tour packages</a></li>
+          <li><a href="#destinations">Destinations</a></li>
+          <li><a href="#about">About us</a></li>
+          <li><a href="#services">Services</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>DESTINATIONS</h4>
+        <ul>
+          <li><a href="#packages">Kenya</a></li>
+          <li><a href="#packages">Mombasa</a></li>
+          <li><a href="#packages">Zanzibar</a></li>
+          <li><a href="#packages">Uganda</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>CONTACT US</h4>
+        <ul class="foot-contact">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg><a href="tel:+254700000000">+254 700 000 000</a></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg><a href="tel:+254711000000">+254 711 000 000</a></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="M22 6l-10 7L2 6"/></svg><a href="mailto:bookings@safariwavesafrica.com">bookings@safariwavesafrica.com</a></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20 15 15 0 0 1 0-20z"/></svg><a href="https://www.safariwavesafrica.com" target="_blank" rel="noopener">www.safariwavesafrica.com</a></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Nairobi, Kenya</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="foot-bottom">
+      <span>&copy; 2026 Safari Waves Africa Tours &amp; Travel Ltd. All rights reserved.</span>
+      <span><em>Karibu!</em> Welcome! You're in good hands.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Floating WhatsApp -->
+<a class="wa-float" href="https://wa.me/254700000000?text=Hi%20Safari%20Waves%2C%20I%27d%20like%20a%20quote%20for%20a%20trip." aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 32 32"><path d="M16.001 3C9.373 3 4 8.373 4 15c0 2.386.696 4.606 1.897 6.481L4 29l7.72-1.865A11.93 11.93 0 0 0 16.001 27C22.63 27 28 21.627 28 15S22.63 3 16.001 3zm6.996 16.845c-.297.836-1.47 1.53-2.404 1.727-.64.135-1.474.243-4.284-.92-3.595-1.489-5.906-5.14-6.086-5.377-.173-.237-1.458-1.942-1.458-3.705 0-1.762.92-2.629 1.246-2.989.297-.327.646-.408.862-.408.216 0 .432.002.62.011.216.01.487-.043.76.582.297.678.997 2.338 1.083 2.507.087.17.146.365.03.594-.117.23-.176.373-.35.575-.173.202-.365.451-.52.605-.174.174-.355.362-.153.71.202.35.9 1.487 1.933 2.407 1.328 1.184 2.446 1.55 2.794 1.723.35.174.55.146.75-.086.202-.23.865-1.008 1.096-1.354.23-.346.462-.288.78-.173.317.115 2.018.951 2.365 1.124.346.173.577.26.664.404.086.145.086.837-.211 1.673z"/></svg>
+</a>
+
+<script>
+  const hamburgerBtn = document.getElementById('hamburgerBtn');
+  const closeNavBtn = document.getElementById('closeNavBtn');
+  const mobileNav = document.getElementById('mobileNav');
+
+  hamburgerBtn.addEventListener('click', () => {
+    mobileNav.classList.add('open');
+    hamburgerBtn.setAttribute('aria-expanded','true');
+  });
+  closeNavBtn.addEventListener('click', () => {
+    mobileNav.classList.remove('open');
+    hamburgerBtn.setAttribute('aria-expanded','false');
+  });
+  mobileNav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    mobileNav.classList.remove('open');
+  }));
+
+  // Package filter pills
+  const pills = document.querySelectorAll('.pill');
+  const cards = document.querySelectorAll('#pkgGrid .pkg-card');
+  pills.forEach(pill => {
+    pill.addEventListener('click', () => {
+      pills.forEach(p => p.classList.remove('active'));
+      pill.classList.add('active');
+      const filter = pill.dataset.filter;
+      cards.forEach(card => {
+        const cats = card.dataset.cat.split(' ');
+        card.style.display = (filter === 'all' || cats.includes(filter)) ? '' : 'none';
+      });
+    });
+  });
+</script>
+
+</body>
+</html>
