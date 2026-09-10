@@ -7,7 +7,7 @@
 <meta name="description" content="Affordable family holidays, beach vacations, safaris and group travel across Kenya, Zanzibar and Uganda. Creating unforgettable East African experiences.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
   :root{
     --navy:#0E2F44;
@@ -37,14 +37,16 @@
   img{max-width:100%;display:block;}
   a{color:inherit;text-decoration:none;}
   ul{margin:0;padding:0;list-style:none;}
-  h1,h2,h3{font-family:'Fraunces',serif;font-weight:600;margin:0;line-height:1.12;color:var(--navy);}
+  h1,h2,h3{font-family:'Playfair Display',serif;font-weight:700;margin:0;line-height:1.14;color:var(--navy);}
   p{margin:0;}
   .wrap{max-width:var(--wrap);margin:0 auto;padding:0 22px;}
   section{padding:64px 0;}
   .eyebrow{
     display:inline-flex;align-items:center;gap:8px;
-    font-size:13px;font-weight:600;color:var(--teal-deep);
-    background:#E6F1F1;border-radius:99px;padding:6px 14px;
+    font-size:12.5px;font-weight:700;color:var(--gold-deep);
+    text-transform:uppercase;letter-spacing:2px;
+    font-family:'Playfair Display',serif;
+    padding-bottom:2px;border-bottom:1px solid var(--line);
   }
   .btn{
     display:inline-flex;align-items:center;justify-content:center;gap:8px;
@@ -61,7 +63,7 @@
   .btn-navy:hover{background:var(--navy-deep);}
   .section-head{max-width:560px;margin-bottom:34px;}
   .section-head .eyebrow{margin-bottom:14px;}
-  .section-head h2{font-size:clamp(26px,4vw,36px);}
+  .section-head h2{font-size:clamp(28px,4vw,40px);}
   .section-head p{margin-top:12px;color:var(--ink-soft);font-size:15.5px;line-height:1.6;}
 
   /* ---------- Top utility bar ---------- */
@@ -83,16 +85,15 @@
     background:var(--navy);
     border-bottom:1px solid rgba(255,255,255,.07);
   }
-  .site-header .wrap{display:flex;align-items:center;justify-content:space-between;padding-top:12px;padding-bottom:12px;gap:16px;}
-  .brand{display:flex;align-items:center;gap:11px;}
-  .brand svg{width:46px;height:46px;flex:none;}
+  .site-header .wrap{display:flex;align-items:center;justify-content:space-between;padding-top:16px;padding-bottom:16px;gap:16px;}
+  .brand{display:flex;align-items:center;}
   .brand-word{line-height:1.15;}
-  .brand-word .b1{font-family:'Fraunces',serif;font-weight:700;font-size:17px;color:var(--white);letter-spacing:.2px;}
+  .brand-word .b1{font-family:'Playfair Display',serif;font-weight:700;font-size:22px;color:var(--white);letter-spacing:.3px;}
   .brand-word .b1 span{color:var(--gold);}
-  .brand-word .b2{font-size:10.5px;letter-spacing:1.5px;color:#A9BBC4;margin-top:1px;}
+  .brand-word .b2{font-size:10.5px;letter-spacing:2.5px;color:#A9BBC4;margin-top:3px;text-transform:uppercase;}
   .nav{display:none;}
   .nav ul{display:flex;align-items:center;gap:28px;}
-  .nav a{color:#E7EEF0;font-size:14.5px;font-weight:600;}
+  .nav a{color:#E7EEF0;font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:.6px;}
   .nav a:hover{color:var(--gold);}
   .header-actions{display:flex;align-items:center;gap:10px;}
   .icon-btn{
@@ -119,7 +120,7 @@
   .mobile-nav-top svg{width:26px;height:26px;stroke:#fff;}
   .mobile-nav ul{padding:6px 26px 30px;display:flex;flex-direction:column;}
   .mobile-nav li{border-bottom:1px solid rgba(255,255,255,.08);}
-  .mobile-nav a{display:block;padding:17px 2px;font-size:18px;font-weight:600;color:#F1F3F4;font-family:'Fraunces',serif;}
+  .mobile-nav a{display:block;padding:17px 2px;font-size:19px;font-weight:700;color:#F1F3F4;font-family:'Playfair Display',serif;}
   .mobile-nav .mn-cta{padding:6px 26px 34px;}
 
   /* ---------- Hero ---------- */
@@ -138,24 +139,25 @@
   .hero-content .wrap{max-width:760px;}
   .hero-pin{
     display:inline-flex;align-items:center;gap:7px;background:rgba(255,255,255,.14);
-    border:1px solid rgba(255,255,255,.28);padding:7px 14px;border-radius:99px;font-size:13px;font-weight:600;
+    border:1px solid rgba(255,255,255,.28);padding:7px 14px;border-radius:99px;
+    font-family:'Playfair Display',serif;font-size:13px;font-weight:700;letter-spacing:.5px;
     backdrop-filter:blur(4px);margin-bottom:18px;
   }
   .hero-pin svg{width:14px;height:14px;stroke:var(--gold);}
-  .hero h1{font-size:clamp(32px,6vw,52px);color:#fff;font-weight:600;}
+  .hero h1{font-size:clamp(34px,6vw,56px);color:#fff;font-weight:800;}
   .hero-sub{margin-top:16px;font-size:16.5px;line-height:1.65;color:#DCE6E9;max-width:540px;}
   .hero-ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px;}
   .hero-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:40px;padding-top:28px;border-top:1px solid rgba(255,255,255,.2);}
   .hero-stat{display:flex;flex-direction:column;gap:6px;}
   .hero-stat svg{width:20px;height:20px;stroke:var(--gold);}
-  .hero-stat b{font-family:'Fraunces',serif;font-size:15px;color:#fff;font-weight:600;}
+  .hero-stat b{font-family:'Playfair Display',serif;font-size:16px;color:#fff;font-weight:700;}
   .hero-stat span{font-size:12.5px;color:#B9C7CC;}
   @media (max-width:560px){ .hero-stats{grid-template-columns:1fr;} }
 
   /* ---------- Country strip ---------- */
   .flagstrip{background:var(--sand);border-bottom:1px solid var(--line);}
   .flagstrip .wrap{display:flex;flex-wrap:wrap;gap:10px 26px;align-items:center;justify-content:center;padding:16px 22px;}
-  .flagstrip .fs-item{display:flex;align-items:center;gap:8px;font-size:13.5px;font-weight:700;color:var(--navy);}
+  .flagstrip .fs-item{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:700;color:var(--navy);text-transform:uppercase;letter-spacing:.6px;}
   .flagstrip .flag{font-size:18px;}
 
   /* ---------- Quick filter pills ---------- */
@@ -163,12 +165,15 @@
   .filterbar .wrap{display:flex;gap:10px;overflow-x:auto;padding-bottom:6px;}
   .pill{
     flex:none;padding:11px 20px;border-radius:99px;border:1.5px solid var(--line);
-    font-size:14px;font-weight:700;color:var(--ink-soft);background:#fff;cursor:pointer;
+    font-size:13.5px;font-weight:700;color:var(--ink-soft);background:#fff;cursor:pointer;
+    text-transform:uppercase;letter-spacing:.4px;
   }
   .pill.active{background:var(--navy);border-color:var(--navy);color:#fff;}
 
   /* ---------- Packages ---------- */
   .packages{padding-top:26px;}
+  .pkg-count{font-size:13.5px;color:var(--ink-soft);margin:18px 0 22px;font-weight:600;}
+  .pkg-count b{color:var(--navy);}
   .pkg-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:22px;}
   .pkg-card{
     border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:#fff;
@@ -178,37 +183,38 @@
   .pkg-media img{width:100%;height:100%;object-fit:cover;}
   .pkg-tag{
     position:absolute;top:12px;left:12px;background:rgba(9,28,41,.78);color:#fff;
-    font-size:11.5px;font-weight:700;padding:5px 11px;border-radius:99px;letter-spacing:.2px;
+    font-size:11px;font-weight:700;padding:5px 11px;border-radius:99px;letter-spacing:.4px;
+    text-transform:uppercase;
   }
   .pkg-body{padding:18px 18px 20px;display:flex;flex-direction:column;gap:10px;flex:1;}
-  .pkg-loc{display:flex;align-items:center;gap:5px;font-size:12.5px;color:var(--teal-deep);font-weight:700;}
+  .pkg-loc{display:flex;align-items:center;gap:5px;font-size:12px;color:var(--teal-deep);font-weight:700;text-transform:uppercase;letter-spacing:.4px;}
   .pkg-loc svg{width:13px;height:13px;stroke:var(--teal-deep);}
-  .pkg-title{font-family:'Fraunces',serif;font-size:19px;color:var(--navy);font-weight:600;}
+  .pkg-title{font-family:'Playfair Display',serif;font-size:20px;color:var(--navy);font-weight:700;}
   .pkg-includes{font-size:13px;color:var(--ink-soft);line-height:1.55;}
   .pkg-foot{margin-top:auto;padding-top:12px;border-top:1px dashed var(--line);display:flex;align-items:center;justify-content:space-between;gap:8px;}
   .pkg-price{font-size:12px;color:var(--ink-soft);}
-  .pkg-price b{display:block;font-family:'Fraunces',serif;font-size:17px;color:var(--navy);font-weight:600;}
-  .pkg-link{display:flex;align-items:center;gap:5px;font-size:13.5px;font-weight:700;color:var(--teal-deep);}
+  .pkg-price b{display:block;font-family:'Playfair Display',serif;font-size:18px;color:var(--navy);font-weight:700;}
+  .pkg-link{display:flex;align-items:center;gap:5px;font-size:13px;font-weight:700;color:var(--teal-deep);text-transform:uppercase;letter-spacing:.4px;}
   .pkg-link svg{width:14px;height:14px;stroke:var(--teal-deep);transition:transform .15s ease;}
   .pkg-card:hover .pkg-link svg{transform:translateX(3px);}
-  .pkg-duration{font-size:11.5px;font-weight:700;color:var(--navy);background:var(--sand);padding:4px 9px;border-radius:6px;align-self:flex-start;}
+  .pkg-duration{font-size:11px;font-weight:700;color:var(--navy);background:var(--sand);padding:4px 9px;border-radius:6px;align-self:flex-start;text-transform:uppercase;letter-spacing:.4px;}
 
   /* ---------- About / Mission ---------- */
   .about{background:var(--navy);color:#fff;}
   .about-grid{display:grid;grid-template-columns:1fr;gap:40px;align-items:start;}
   @media (min-width:880px){ .about-grid{grid-template-columns:1fr 1fr;} }
-  .about .eyebrow{background:rgba(217,164,65,.16);color:var(--gold);}
-  .about h2{color:#fff;font-size:clamp(26px,4vw,34px);margin-top:14px;}
+  .about .eyebrow{background:transparent;color:var(--gold);border-color:rgba(217,164,65,.4);}
+  .about h2{color:#fff;font-size:clamp(28px,4vw,38px);margin-top:14px;}
   .about-copy{margin-top:16px;color:#C8D3D8;font-size:15.5px;line-height:1.7;max-width:480px;}
   .about-quote{
-    margin-top:22px;font-family:'Fraunces',serif;font-style:italic;font-size:17px;color:var(--gold);
+    margin-top:22px;font-family:'Playfair Display',serif;font-style:italic;font-size:18px;color:var(--gold);
     border-left:3px solid var(--gold);padding-left:14px;
   }
   .mvp{display:flex;flex-direction:column;gap:14px;}
   .mvp-item{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:var(--radius);padding:20px;display:flex;gap:14px;}
   .mvp-icon{width:42px;height:42px;border-radius:10px;background:rgba(217,164,65,.14);display:flex;align-items:center;justify-content:center;flex:none;}
   .mvp-icon svg{width:20px;height:20px;stroke:var(--gold);}
-  .mvp-item h3{color:#fff;font-size:16.5px;font-weight:600;margin-bottom:5px;}
+  .mvp-item h3{color:#fff;font-size:17px;font-weight:700;margin-bottom:5px;}
   .mvp-item p{color:#B9C7CC;font-size:13.8px;line-height:1.55;}
 
   /* ---------- Destinations ---------- */
@@ -219,8 +225,8 @@
   .dest-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
   .dest-card::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(9,28,41,0) 30%,rgba(9,28,41,.88) 100%);}
   .dest-info{position:relative;z-index:2;padding:22px;color:#fff;}
-  .dest-info .eyebrow{background:rgba(255,255,255,.16);color:#fff;margin-bottom:8px;}
-  .dest-info h3{font-family:'Fraunces',serif;font-size:22px;color:#fff;font-weight:600;}
+  .dest-info .eyebrow{background:transparent;color:#fff;border-color:rgba(255,255,255,.4);margin-bottom:8px;}
+  .dest-info h3{font-family:'Playfair Display',serif;font-size:24px;color:#fff;font-weight:700;}
   .dest-info p{margin-top:6px;font-size:13.5px;color:#DCE6E9;max-width:320px;line-height:1.5;}
 
   /* ---------- Why travel with us ---------- */
@@ -228,25 +234,38 @@
   .why-card{border:1px solid var(--line);border-radius:var(--radius);padding:24px 20px;text-align:left;}
   .why-icon{width:44px;height:44px;border-radius:11px;background:var(--sand);display:flex;align-items:center;justify-content:center;margin-bottom:14px;}
   .why-icon svg{width:21px;height:21px;stroke:var(--teal-deep);}
-  .why-card h3{font-size:15.5px;font-weight:700;font-family:'Manrope',sans-serif;color:var(--navy);margin-bottom:6px;}
+  .why-card h3{font-size:16px;font-weight:700;font-family:'Playfair Display',serif;color:var(--navy);margin-bottom:6px;}
   .why-card p{font-size:13px;color:var(--ink-soft);line-height:1.55;}
 
   /* ---------- Services ---------- */
   .services{background:var(--teal);color:#fff;}
   .services-grid{display:grid;grid-template-columns:1fr;gap:36px;}
   @media (min-width:880px){ .services-grid{grid-template-columns:.85fr 1.15fr;align-items:center;} }
-  .services h2{color:#fff;font-size:clamp(26px,4vw,32px);}
-  .services .eyebrow{background:rgba(255,255,255,.16);color:#fff;}
+  .services h2{color:#fff;font-size:clamp(28px,4vw,34px);}
+  .services .eyebrow{background:transparent;color:#fff;border-color:rgba(255,255,255,.4);}
   .services-copy{margin-top:14px;color:#DCEEEF;font-size:15px;line-height:1.65;max-width:420px;}
   .services-list{display:grid;grid-template-columns:1fr 1fr;gap:12px 20px;}
-  .services-list li{display:flex;align-items:center;gap:10px;font-size:14px;font-weight:600;padding:12px 4px;border-bottom:1px solid rgba(255,255,255,.16);}
+  .services-list li{display:flex;align-items:center;gap:10px;font-size:14px;font-weight:700;padding:12px 4px;border-bottom:1px solid rgba(255,255,255,.16);}
   .services-list svg{width:16px;height:16px;stroke:var(--gold);flex:none;}
   @media (max-width:520px){ .services-list{grid-template-columns:1fr;} }
+
+  /* ---------- Testimonials ---------- */
+  .testimonials{background:var(--sand-deep);}
+  .test-grid{display:grid;grid-template-columns:1fr;gap:18px;}
+  @media (min-width:760px){ .test-grid{grid-template-columns:repeat(3,1fr);} }
+  .test-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px;display:flex;flex-direction:column;gap:14px;}
+  .test-stars{display:flex;gap:3px;}
+  .test-stars svg{width:15px;height:15px;fill:var(--gold);stroke:none;}
+  .test-quote{font-family:'Playfair Display',serif;font-style:italic;font-size:15.5px;color:var(--navy);line-height:1.55;}
+  .test-who{display:flex;align-items:center;gap:10px;margin-top:auto;padding-top:8px;}
+  .test-avatar{width:38px;height:38px;border-radius:50%;background:var(--navy);color:var(--gold);display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-weight:700;font-size:15px;flex:none;}
+  .test-name{font-size:13.5px;font-weight:700;color:var(--navy);}
+  .test-trip{font-size:12px;color:var(--ink-soft);}
 
   /* ---------- CTA banner ---------- */
   .cta-banner{background:var(--gold);}
   .cta-inner{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:22px;}
-  .cta-inner h2{font-size:clamp(22px,3.4vw,30px);color:var(--navy-deep);max-width:480px;}
+  .cta-inner h2{font-size:clamp(24px,3.4vw,32px);color:var(--navy-deep);max-width:480px;}
   .cta-inner p{margin-top:8px;color:#5A4419;font-size:14.5px;}
   .cta-actions{display:flex;flex-wrap:wrap;gap:12px;}
 
@@ -254,13 +273,12 @@
   footer{background:var(--navy-deep);color:#B9C7CC;padding-top:60px;}
   .foot-grid{display:grid;grid-template-columns:1fr;gap:36px;}
   @media (min-width:760px){ .foot-grid{grid-template-columns:1.3fr 1fr 1fr 1.1fr;} }
-  .foot-brand{display:flex;align-items:center;gap:11px;margin-bottom:14px;}
-  .foot-brand svg{width:40px;height:40px;}
-  .foot-brand .b1{font-family:'Fraunces',serif;color:#fff;font-weight:700;font-size:16px;}
+  .foot-brand{margin-bottom:14px;}
+  .foot-brand .b1{font-family:'Playfair Display',serif;color:#fff;font-weight:700;font-size:19px;}
   .foot-brand .b1 span{color:var(--gold);}
   .foot-tag{font-size:13.5px;line-height:1.6;max-width:280px;color:#93A5AC;}
   .foot-flags{display:flex;gap:8px;margin-top:16px;font-size:20px;}
-  footer h4{color:#fff;font-size:13.5px;letter-spacing:.3px;margin-bottom:16px;font-family:'Manrope',sans-serif;}
+  footer h4{color:#fff;font-size:13px;letter-spacing:1.5px;margin-bottom:16px;font-family:'Playfair Display',serif;text-transform:uppercase;}
   footer ul li{margin-bottom:11px;font-size:13.8px;}
   footer ul li a:hover{color:var(--gold);}
   .foot-contact li{display:flex;align-items:flex-start;gap:9px;}
@@ -299,16 +317,9 @@
 <header class="site-header">
   <div class="wrap">
     <a class="brand" href="#top">
-      <svg viewBox="0 0 60 60" fill="none">
-        <circle cx="30" cy="30" r="29" fill="#0A2333" stroke="#D9A441" stroke-width="1.5"/>
-        <path d="M30 10 L30 4 M20 13 L16 8 M40 13 L44 8" stroke="#D9A441" stroke-width="2" stroke-linecap="round"/>
-        <circle cx="30" cy="22" r="7" fill="none" stroke="#D9A441" stroke-width="2"/>
-        <path d="M12 36c3-3 6-3 9 0s6 3 9 0 6-3 9 0 6 3 9 0" stroke="#F6F1E6" stroke-width="2" fill="none" stroke-linecap="round"/>
-        <path d="M12 44c3-3 6-3 9 0s6 3 9 0 6-3 9 0 6 3 9 0" stroke="#15707E" stroke-width="2" fill="none" stroke-linecap="round"/>
-      </svg>
       <span class="brand-word">
         <span class="b1">Safari<span> Waves</span></span><br>
-        <span class="b2">AFRICA TOURS &amp; TRAVEL</span>
+        <span class="b2">Africa Tours &amp; Travel</span>
       </span>
     </a>
 
@@ -403,18 +414,20 @@
     <div class="section-head">
       <span class="eyebrow">Tour packages</span>
       <h2>One region, endless experiences</h2>
-      <p>Ten curated packages across Kenya, Zanzibar and Uganda, plus family bundles for groups travelling together. Prices are per person unless stated.</p>
+      <p>A growing collection of curated packages across Kenya, Zanzibar and Uganda, plus family bundles for groups travelling together. Prices are per person unless stated.</p>
     </div>
 
-    <div class="filterbar" style="padding:0 0 26px;">
+    <div class="filterbar" style="padding:0 0 6px;">
       <div class="wrap" style="padding:0;">
         <button class="pill active" data-filter="all">All packages</button>
         <button class="pill" data-filter="kenya">Kenya</button>
         <button class="pill" data-filter="zanzibar">Zanzibar</button>
         <button class="pill" data-filter="uganda">Uganda</button>
+        <button class="pill" data-filter="beach">Beach</button>
         <button class="pill" data-filter="family">Family &amp; groups</button>
       </div>
     </div>
+    <p class="pkg-count"><b id="pkgVisibleCount">20</b> packages across 3 countries</p>
 
     <div class="pkg-grid" id="pkgGrid">
 
@@ -472,6 +485,42 @@
         </div>
       </article>
 
+      <!-- Lake Nakuru Getaway -->
+      <article class="pkg-card" data-cat="kenya">
+        <div class="pkg-media">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Flamingos%20at%20Lake%20Nakuru.jpg?width=800" alt="Flamingos at Lake Nakuru, Kenya">
+          <span class="pkg-tag">Safari</span>
+        </div>
+        <div class="pkg-body">
+          <span class="pkg-duration">2 Days / 1 Night</span>
+          <div class="pkg-loc"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Lake Nakuru, Kenya</div>
+          <h3 class="pkg-title">Lake Nakuru Getaway</h3>
+          <p class="pkg-includes">4x4 transport, accommodation, meals, game drive &amp; park entry fees.</p>
+          <div class="pkg-foot">
+            <div class="pkg-price">From<b>KSh 40,000</b></div>
+            <a class="pkg-link" href="https://wa.me/254700000000?text=Hi%20Safari%20Waves%2C%20I%27m%20interested%20in%20the%20Lake%20Nakuru%20Getaway.">Enquire <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Amboseli Safari -->
+      <article class="pkg-card" data-cat="kenya">
+        <div class="pkg-media">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Elephants%20at%20Amboseli%20National%20Park%20with%20Mount%20Kilimanjaro.jpg?width=800" alt="Elephants at Amboseli with Mount Kilimanjaro, Kenya">
+          <span class="pkg-tag">Safari</span>
+        </div>
+        <div class="pkg-body">
+          <span class="pkg-duration">3 Days / 2 Nights</span>
+          <div class="pkg-loc"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Amboseli, Kenya</div>
+          <h3 class="pkg-title">Amboseli &amp; Kilimanjaro Views</h3>
+          <p class="pkg-includes">4x4 safari van, accommodation, full board meals, game drives &amp; park fees.</p>
+          <div class="pkg-foot">
+            <div class="pkg-price">From<b>KSh 58,000</b></div>
+            <a class="pkg-link" href="https://wa.me/254700000000?text=Hi%20Safari%20Waves%2C%20I%27m%20interested%20in%20the%20Amboseli%20Safari.">Enquire <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+      </article>
+
       <!-- Kampala Explorer -->
       <article class="pkg-card" data-cat="uganda">
         <div class="pkg-media">
@@ -508,6 +557,60 @@
         </div>
       </article>
 
+      <!-- Murchison Falls Safari -->
+      <article class="pkg-card" data-cat="uganda">
+        <div class="pkg-media">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Murchison%20Falls%2C%20Uganda.jpg?width=800" alt="Murchison Falls, Uganda">
+          <span class="pkg-tag">Wildlife</span>
+        </div>
+        <div class="pkg-body">
+          <span class="pkg-duration">4 Days / 3 Nights</span>
+          <div class="pkg-loc"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Murchison Falls, Uganda</div>
+          <h3 class="pkg-title">Murchison Falls Safari</h3>
+          <p class="pkg-includes">Game drives, Nile boat cruise to the falls, accommodation, meals &amp; park fees.</p>
+          <div class="pkg-foot">
+            <div class="pkg-price">From<b>KSh 130,000</b></div>
+            <a class="pkg-link" href="https://wa.me/254700000000?text=Hi%20Safari%20Waves%2C%20I%27m%20interested%20in%20the%20Murchison%20Falls%20Safari.">Enquire <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Uganda Gorilla Trekking -->
+      <article class="pkg-card" data-cat="uganda">
+        <div class="pkg-media">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Mountain_gorilla,_2-year-old,_Mubare_Group,_Buhoma,_Bwindi_Impenetrable_Forest,_Uganda.jpg?width=800" alt="Mountain gorilla in Bwindi Impenetrable Forest, Uganda">
+          <span class="pkg-tag">Wildlife</span>
+        </div>
+        <div class="pkg-body">
+          <span class="pkg-duration">4 Days / 3 Nights</span>
+          <div class="pkg-loc"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Bwindi, Uganda</div>
+          <h3 class="pkg-title">Uganda Gorilla Trekking</h3>
+          <p class="pkg-includes">Gorilla trekking permit, accommodation, all meals, professional guide &amp; ground transport. Permits are limited &mdash; book early.</p>
+          <div class="pkg-foot">
+            <div class="pkg-price">From<b>KSh 220,000</b></div>
+            <a class="pkg-link" href="https://wa.me/254700000000?text=Hi%20Safari%20Waves%2C%20I%27m%20interested%20in%20Uganda%20Gorilla%20Trekking.">Enquire <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Queen Elizabeth National Park -->
+      <article class="pkg-card" data-cat="uganda">
+        <div class="pkg-media">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Tree%20climbing%20lions%2C%20Queen%20Elizabeth%20National%20Park.jpg?width=800" alt="Tree-climbing lions, Queen Elizabeth National Park, Uganda">
+          <span class="pkg-tag">Wildlife</span>
+        </div>
+        <div class="pkg-body">
+          <span class="pkg-duration">4 Days / 3 Nights</span>
+          <div class="pkg-loc"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Queen Elizabeth NP, Uganda</div>
+          <h3 class="pkg-title">Queen Elizabeth Safari</h3>
+          <p class="pkg-includes">Game drives, Kazinga Channel boat cruise, accommodation, meals &amp; park fees.</p>
+          <div class="pkg-foot">
+            <div class="pkg-price">From<b>KSh 140,000</b></div>
+            <a class="pkg-link" href="https://wa.me/254700000000?text=Hi%20Safari%20Waves%2C%20I%27m%20interested%20in%20the%20Queen%20Elizabeth%20Safari.">Enquire <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+      </article>
+
       <!-- Mombasa Holiday Package -->
       <article class="pkg-card" data-cat="kenya beach">
         <div class="pkg-media">
@@ -522,6 +625,42 @@
           <div class="pkg-foot">
             <div class="pkg-price">From<b>KSh 75,000</b></div>
             <a class="pkg-link" href="https://wa.me/254700000000?text=Hi%20Safari%20Waves%2C%20I%27m%20interested%20in%20the%20Mombasa%20Holiday%20Package.">Enquire <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Diani Beach Resort Break -->
+      <article class="pkg-card" data-cat="kenya beach">
+        <div class="pkg-media">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Diani%20Beach%20Kenya%20palm%20trees.jpg?width=800" alt="Palm-lined shore at Diani Beach, Kenya">
+          <span class="pkg-tag">Beach resort</span>
+        </div>
+        <div class="pkg-body">
+          <span class="pkg-duration">4 Days / 3 Nights</span>
+          <div class="pkg-loc"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Diani, Kenya</div>
+          <h3 class="pkg-title">Diani Beach Resort Break</h3>
+          <p class="pkg-includes">Beachfront resort stay, half board meals, water sports taster &amp; airport/SGR transfers.</p>
+          <div class="pkg-foot">
+            <div class="pkg-price">From<b>KSh 68,000</b></div>
+            <a class="pkg-link" href="https://wa.me/254700000000?text=Hi%20Safari%20Waves%2C%20I%27m%20interested%20in%20the%20Diani%20Beach%20Resort%20Break.">Enquire <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Watamu Marine Escape -->
+      <article class="pkg-card" data-cat="kenya beach">
+        <div class="pkg-media">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Watamu%20beach%2C%20Kenya.jpg?width=800" alt="Watamu beach, Kenya">
+          <span class="pkg-tag">Beach &amp; marine</span>
+        </div>
+        <div class="pkg-body">
+          <span class="pkg-duration">4 Days / 3 Nights</span>
+          <div class="pkg-loc"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Watamu, Kenya</div>
+          <h3 class="pkg-title">Watamu Marine Escape</h3>
+          <p class="pkg-includes">Cottage accommodation, breakfast, Watamu Marine Park snorkelling trip &amp; Gede Ruins visit.</p>
+          <div class="pkg-foot">
+            <div class="pkg-price">From<b>KSh 62,000</b></div>
+            <a class="pkg-link" href="https://wa.me/254700000000?text=Hi%20Safari%20Waves%2C%20I%27m%20interested%20in%20the%20Watamu%20Marine%20Escape.">Enquire <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
           </div>
         </div>
       </article>
@@ -580,20 +719,20 @@
         </div>
       </article>
 
-      <!-- Uganda Gorilla Trekking -->
-      <article class="pkg-card" data-cat="uganda">
+      <!-- Zanzibar Stone Town Culture Trail -->
+      <article class="pkg-card" data-cat="zanzibar">
         <div class="pkg-media">
-          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Mountain_gorilla,_2-year-old,_Mubare_Group,_Buhoma,_Bwindi_Impenetrable_Forest,_Uganda.jpg?width=800" alt="Mountain gorilla in Bwindi Impenetrable Forest, Uganda">
-          <span class="pkg-tag">Wildlife</span>
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Stone%20Town%2C%20Zanzibar%20streets.jpg?width=800" alt="Historic streets of Stone Town, Zanzibar">
+          <span class="pkg-tag">Culture</span>
         </div>
         <div class="pkg-body">
-          <span class="pkg-duration">4 Days / 3 Nights</span>
-          <div class="pkg-loc"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Bwindi, Uganda</div>
-          <h3 class="pkg-title">Uganda Gorilla Trekking</h3>
-          <p class="pkg-includes">Gorilla trekking permit, accommodation, all meals, professional guide &amp; ground transport. Permits are limited &mdash; book early.</p>
+          <span class="pkg-duration">3 Days / 2 Nights</span>
+          <div class="pkg-loc"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Stone Town, Zanzibar</div>
+          <h3 class="pkg-title">Stone Town Culture Trail</h3>
+          <p class="pkg-includes">Return flights, heritage hotel stay, guided old-town walking tour &amp; spice market visit.</p>
           <div class="pkg-foot">
-            <div class="pkg-price">From<b>KSh 220,000</b></div>
-            <a class="pkg-link" href="https://wa.me/254700000000?text=Hi%20Safari%20Waves%2C%20I%27m%20interested%20in%20Uganda%20Gorilla%20Trekking.">Enquire <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            <div class="pkg-price">From<b>KSh 78,000</b></div>
+            <a class="pkg-link" href="https://wa.me/254700000000?text=Hi%20Safari%20Waves%2C%20I%27m%20interested%20in%20the%20Stone%20Town%20Culture%20Trail.">Enquire <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
           </div>
         </div>
       </article>
@@ -630,6 +769,42 @@
           <div class="pkg-foot">
             <div class="pkg-price">From<b>KSh 350,000</b><span style="font-size:11px;font-weight:600;">per family</span></div>
             <a class="pkg-link" href="https://wa.me/254700000000?text=Hi%20Safari%20Waves%2C%20I%27m%20interested%20in%20the%20Family%20of%208%20Coast%20Package.">Enquire <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Church Group Retreat -->
+      <article class="pkg-card" data-cat="family kenya">
+        <div class="pkg-media">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Naivasha%20Lake%20Kenya.jpg?width=800" alt="Lake Naivasha retreat venue, Kenya">
+          <span class="pkg-tag">Group retreat</span>
+        </div>
+        <div class="pkg-body">
+          <span class="pkg-duration">2 Days / 1 Night</span>
+          <div class="pkg-loc"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Naivasha, Kenya</div>
+          <h3 class="pkg-title">Church &amp; Corporate Group Retreat</h3>
+          <p class="pkg-includes">Group coach transport, retreat venue accommodation, full board meals &amp; team activities. Group rates on request.</p>
+          <div class="pkg-foot">
+            <div class="pkg-price">From<b>KSh 15,000</b><span style="font-size:11px;font-weight:600;">per person</span></div>
+            <a class="pkg-link" href="https://wa.me/254700000000?text=Hi%20Safari%20Waves%2C%20I%27m%20interested%20in%20the%20Church%20%26%20Corporate%20Group%20Retreat.">Enquire <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Multi-country Kenya-Zanzibar Combo -->
+      <article class="pkg-card" data-cat="kenya zanzibar beach family">
+        <div class="pkg-media">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Nungwi%20sunset%20Zanzibar.jpg?width=800" alt="Sunset at Nungwi, Zanzibar">
+          <span class="pkg-tag">Combo</span>
+        </div>
+        <div class="pkg-body">
+          <span class="pkg-duration">7 Days / 6 Nights</span>
+          <div class="pkg-loc"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Maasai Mara &amp; Zanzibar</div>
+          <h3 class="pkg-title">Safari &amp; Beach Combo</h3>
+          <p class="pkg-includes">3 nights Maasai Mara safari plus 3 nights Zanzibar beach stay, all transfers &amp; internal flights included.</p>
+          <div class="pkg-foot">
+            <div class="pkg-price">From<b>KSh 195,000</b></div>
+            <a class="pkg-link" href="https://wa.me/254700000000?text=Hi%20Safari%20Waves%2C%20I%27m%20interested%20in%20the%20Safari%20%26%20Beach%20Combo.">Enquire <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
           </div>
         </div>
       </article>
@@ -763,6 +938,60 @@
   </div>
 </section>
 
+<!-- Testimonials -->
+<section class="testimonials">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Traveller stories</span>
+      <h2>What our guests say</h2>
+    </div>
+    <div class="test-grid">
+      <div class="test-card">
+        <div class="test-stars">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+        </div>
+        <p class="test-quote">&ldquo;Our Maasai Mara safari was flawlessly organised, right down to the transfers. We'll be booking Zanzibar next.&rdquo;</p>
+        <div class="test-who">
+          <div class="test-avatar">A</div>
+          <div><div class="test-name">Amina K.</div><div class="test-trip">Maasai Mara Safari</div></div>
+        </div>
+      </div>
+      <div class="test-card">
+        <div class="test-stars">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+        </div>
+        <p class="test-quote">&ldquo;Booked the Family of 8 Coast Package for our reunion &mdash; smooth from quote to check-in, and great value.&rdquo;</p>
+        <div class="test-who">
+          <div class="test-avatar">D</div>
+          <div><div class="test-name">David M.</div><div class="test-trip">Family Coast Package</div></div>
+        </div>
+      </div>
+      <div class="test-card">
+        <div class="test-stars">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+        </div>
+        <p class="test-quote">&ldquo;Gorilla trekking in Bwindi was the trip of a lifetime and every permit and detail was handled for us.&rdquo;</p>
+        <div class="test-who">
+          <div class="test-avatar">S</div>
+          <div><div class="test-name">Sarah W.</div><div class="test-trip">Uganda Gorilla Trekking</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- CTA Banner -->
 <section class="cta-banner">
   <div class="wrap cta-inner">
@@ -783,12 +1012,6 @@
     <div class="foot-grid">
       <div>
         <div class="foot-brand">
-          <svg viewBox="0 0 60 60" fill="none">
-            <circle cx="30" cy="30" r="29" fill="#0A2333" stroke="#D9A441" stroke-width="1.5"/>
-            <circle cx="30" cy="22" r="7" fill="none" stroke="#D9A441" stroke-width="2"/>
-            <path d="M12 36c3-3 6-3 9 0s6 3 9 0 6-3 9 0 6 3 9 0" stroke="#F6F1E6" stroke-width="2" fill="none" stroke-linecap="round"/>
-            <path d="M12 44c3-3 6-3 9 0s6 3 9 0 6-3 9 0 6 3 9 0" stroke="#15707E" stroke-width="2" fill="none" stroke-linecap="round"/>
-          </svg>
           <span class="b1">Safari<span> Waves</span></span>
         </div>
         <p class="foot-tag">Africa Tours &amp; Travel Ltd &mdash; creating unforgettable East African experiences across Kenya, Zanzibar and Uganda.</p>
@@ -796,7 +1019,7 @@
       </div>
 
       <div>
-        <h4>QUICK LINKS</h4>
+        <h4>Quick Links</h4>
         <ul>
           <li><a href="#packages">Tour packages</a></li>
           <li><a href="#destinations">Destinations</a></li>
@@ -806,7 +1029,7 @@
       </div>
 
       <div>
-        <h4>DESTINATIONS</h4>
+        <h4>Destinations</h4>
         <ul>
           <li><a href="#packages">Kenya</a></li>
           <li><a href="#packages">Mombasa</a></li>
@@ -816,7 +1039,7 @@
       </div>
 
       <div>
-        <h4>CONTACT US</h4>
+        <h4>Contact Us</h4>
         <ul class="foot-contact">
           <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg><a href="tel:+254700000000">+254 700 000 000</a></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg><a href="tel:+254711000000">+254 711 000 000</a></li>
@@ -859,18 +1082,24 @@
   // Package filter pills
   const pills = document.querySelectorAll('.pill');
   const cards = document.querySelectorAll('#pkgGrid .pkg-card');
+  const countLabel = document.getElementById('pkgVisibleCount');
   pills.forEach(pill => {
     pill.addEventListener('click', () => {
       pills.forEach(p => p.classList.remove('active'));
       pill.classList.add('active');
       const filter = pill.dataset.filter;
+      let visible = 0;
       cards.forEach(card => {
         const cats = card.dataset.cat.split(' ');
-        card.style.display = (filter === 'all' || cats.includes(filter)) ? '' : 'none';
+        const show = (filter === 'all' || cats.includes(filter));
+        card.style.display = show ? '' : 'none';
+        if (show) visible++;
       });
+      countLabel.textContent = visible;
     });
   });
 </script>
 
 </body>
 </html>
+
