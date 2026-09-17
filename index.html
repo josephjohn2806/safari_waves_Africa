@@ -132,23 +132,38 @@
   .mobile-nav a{display:block;padding:17px 2px;font-size:19px;font-weight:700;color:#F1EADC;font-family:'Playfair Display',serif;}
   .mobile-nav .mn-cta{padding:6px 26px 34px;}
 
-  /* ---------- Hero (rotating slideshow, simulates the reference site's looping video) ---------- */
+  /* ---------- Hero (rotating slideshow, 10 slides) ---------- */
   .hero{position:relative;padding:0;overflow:hidden;color:#fff;}
   .hero-media{position:relative;min-height:660px;display:flex;align-items:flex-end;}
+  /*
+    10 slides, 6s "slot" each => total loop T = 60s.
+    Keyframe percentages are fractions of T:
+      fade-in ends at   0.72s -> 0.72/60  = 1.2%
+      hold ends at      5.40s -> 5.40/60  = 9%
+      fade-out ends at  6.48s -> 6.48/60  = 10.8%  (slight crossfade into next slide)
+    animation-delay is staggered in 6s steps so exactly one slide is visible at a time.
+  */
   .hero-slide{
     position:absolute;inset:0;opacity:0;
-    animation:heroCycle 18s infinite;
+    animation:heroCycle 60s infinite;
   }
   .hero-slide img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0;
-    animation:kenburns 18s ease-in-out infinite;}
+    animation:kenburns 60s ease-in-out infinite;}
   .hero-slide:nth-child(1){animation-delay:0s;}
   .hero-slide:nth-child(2){animation-delay:6s;}
   .hero-slide:nth-child(3){animation-delay:12s;}
+  .hero-slide:nth-child(4){animation-delay:18s;}
+  .hero-slide:nth-child(5){animation-delay:24s;}
+  .hero-slide:nth-child(6){animation-delay:30s;}
+  .hero-slide:nth-child(7){animation-delay:36s;}
+  .hero-slide:nth-child(8){animation-delay:42s;}
+  .hero-slide:nth-child(9){animation-delay:48s;}
+  .hero-slide:nth-child(10){animation-delay:54s;}
   @keyframes heroCycle{
     0%{opacity:0;}
-    4%{opacity:1;}
-    30%{opacity:1;}
-    36%{opacity:0;}
+    1.2%{opacity:1;}
+    9%{opacity:1;}
+    10.8%{opacity:0;}
     100%{opacity:0;}
   }
   @keyframes kenburns{from{transform:scale(1.06);}to{transform:scale(1.16);}}
@@ -166,15 +181,22 @@
   .hero-pin svg{width:14px;height:14px;stroke:var(--gold);}
   .hero-headlines{position:relative;min-height:150px;}
   @media(max-width:640px){.hero-headlines{min-height:190px;}}
-  .hero-h{position:absolute;inset:0;opacity:0;animation:textCycle 18s infinite;}
+  .hero-h{position:absolute;inset:0;opacity:0;animation:textCycle 60s infinite;}
   .hero-h:nth-child(1){animation-delay:0s;}
   .hero-h:nth-child(2){animation-delay:6s;}
   .hero-h:nth-child(3){animation-delay:12s;}
+  .hero-h:nth-child(4){animation-delay:18s;}
+  .hero-h:nth-child(5){animation-delay:24s;}
+  .hero-h:nth-child(6){animation-delay:30s;}
+  .hero-h:nth-child(7){animation-delay:36s;}
+  .hero-h:nth-child(8){animation-delay:42s;}
+  .hero-h:nth-child(9){animation-delay:48s;}
+  .hero-h:nth-child(10){animation-delay:54s;}
   @keyframes textCycle{
     0%{opacity:0;transform:translateY(8px);}
-    4%{opacity:1;transform:translateY(0);}
-    30%{opacity:1;transform:translateY(0);}
-    36%{opacity:0;transform:translateY(-8px);}
+    1.2%{opacity:1;transform:translateY(0);}
+    9%{opacity:1;transform:translateY(0);}
+    10.8%{opacity:0;transform:translateY(-8px);}
     100%{opacity:0;}
   }
   .hero h1{font-size:clamp(34px,6vw,54px);color:#fff;font-weight:800;}
@@ -391,7 +413,7 @@
   <div class="wrap">
     <div class="topbar-status"><span class="dot"></span> Karibu! We're open</div>
     <div class="topbar-links">
-      <a href="tel:+254 "><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span class="hide-mobile">+254 791314446</span></a>
+      <a href="tel:+254791314446"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span class="hide-mobile">+254 791314446</span></a>
       <a href="mailto:bookings@safariwavesafrica.com" class="hide-mobile">bookings@safariwavesafrica.com</a>
     </div>
   </div>
@@ -462,6 +484,27 @@
     <div class="hero-slide">
       <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Murchison%20Falls%2C%20Uganda.jpg?width=1600" alt="Murchison Falls, Uganda">
     </div>
+    <div class="hero-slide">
+      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Nairobi_City_Skyline.jpg?width=1600" alt="Nairobi city skyline, Kenya">
+    </div>
+    <div class="hero-slide">
+      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Diani_Beach,_Mombasa,_Kenya.jpg?width=1600" alt="Diani Beach, Mombasa, Kenya">
+    </div>
+    <div class="hero-slide">
+      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Mountain_gorilla,_2-year-old,_Mubare_Group,_Buhoma,_Bwindi_Impenetrable_Forest,_Uganda.jpg?width=1600" alt="Mountain gorilla in Bwindi Impenetrable Forest, Uganda">
+    </div>
+    <div class="hero-slide">
+      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Flamingos%20at%20Lake%20Nakuru.jpg?width=1600" alt="Flamingos at Lake Nakuru, Kenya">
+    </div>
+    <div class="hero-slide">
+      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Forodhani_Gardens_Sea_Front_Sunset_-_Zanzibar.jpg?width=1600" alt="Sunset over Stone Town, Zanzibar">
+    </div>
+    <div class="hero-slide">
+      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Source_of_Nile,_Spring_at_Jinja,_Lake_Victoria.jpg?width=1600" alt="Source of the Nile at Jinja, Uganda">
+    </div>
+    <div class="hero-slide">
+      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Skyline_of_Kampala.jpg?width=1600" alt="Kampala city skyline, Uganda">
+    </div>
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <div class="wrap">
@@ -480,12 +523,40 @@
           </div>
           <div class="hero-h">
             <h1>Beach Days in Zanzibar.</h1>
-            <p class="hero-sub">Turquoise water, Stone Town history and sunset dhow cruises &mdash; honeymoon, family or solo, we'll build the itinerary.</
+            <p class="hero-sub">Turquoise water, Stone Town history and sunset dhow cruises &mdash; honeymoon, family or solo, we'll build the itinerary.</p>
+          </div>
+          <div class="hero-h">
+            <h1>Discover Nairobi.</h1>
+            <p class="hero-sub">The Giraffe Centre, Nairobi National Park and a buzzing city scene &mdash; the perfect stopover before or after your safari.</p>
+          </div>
+          <div class="hero-h">
+            <h1>Coastal Bliss in Diani.</h1>
+            <p class="hero-sub">Powder-white sand and warm Indian Ocean water along Kenya's coast &mdash; ideal for a relaxed family escape.</p>
+          </div>
+          <div class="hero-h">
+            <h1>Meet the Mountain Gorillas.</h1>
+            <p class="hero-sub">Trek through Bwindi Impenetrable Forest for a face-to-face encounter you'll never forget &mdash; permits arranged for you.</p>
+          </div>
+          <div class="hero-h">
+            <h1>Flamingos at Lake Nakuru.</h1>
+            <p class="hero-sub">Pink flocks along the shoreline and rich birdlife in one of Kenya's most photogenic parks.</p>
+          </div>
+          <div class="hero-h">
+            <h1>Sunset Over Stone Town.</h1>
+            <p class="hero-sub">Wander spice-scented alleys by day and watch the sky turn gold over the harbour by evening.</p>
+          </div>
+          <div class="hero-h">
+            <h1>Adventure on the Nile.</h1>
+            <p class="hero-sub">From Jinja's calm source waters to white-knuckle rafting downstream &mdash; the Nile has a pace for everyone.</p>
+          </div>
+          <div class="hero-h">
+            <h1>Explore Kampala.</h1>
+            <p class="hero-sub">Uganda's lively capital, markets and culture &mdash; a great gateway into the Pearl of Africa.</p>
           </div>
         </div>
         <div class="hero-ctas">
           <a class="btn btn-gold" href="#packages">Browse packages</a>
-          <a class="btn btn-outline" href="https://wa.me/254781314446?text=Hi%20Safari%20Waves%2C%20I%27d%20like%20a%20quote%20for%20a%20trip.">Plan my trip</a>
+          <a class="btn btn-outline" href="https://wa.me/254791314446?text=Hi%20Safari%20Waves%2C%20I%27d%20like%20a%20quote%20for%20a%20trip.">Plan my trip</a>
         </div>
         <form class="hero-search" id="heroSearch">
           <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
@@ -581,7 +652,7 @@
             <div class="pkg-duration">3 DAYS / 2 NIGHTS</div>
             <div class="pkg-price">From<br><b>KSh 50,000</b></div>
           </div>
-          <a class="pkg-link" href="https://wa.me/254700000000?text=Hi%20Safari%20Waves%2C%20I%27m%20interested%20in%20the%20Mombasa%20Budget%20Escape.">Enquire <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a class="pkg-link" href="https://wa.me/254791314446?text=Hi%20Safari%20Waves%2C%20I%27m%20interested%20in%20the%20Mombasa%20Budget%20Escape.">Enquire <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         </div>
       </article>
 
@@ -629,7 +700,7 @@
             <div class="pkg-duration">2 DAYS / 1 NIGHT</div>
             <div class="pkg-price">From<br><b>KSh 40,000</b></div>
           </div>
-          <a class="pkg-link" href="https://wa.me/254700000000?text=Hi%20Safari%20Waves%2C%20I%27m%20interested%20in%20the%20Lake%20Nakuru%20Getaway.">Enquire <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a class="pkg-link" href="https://wa.me/254791314446?text=Hi%20Safari%20Waves%2C%20I%27m%20interested%20in%20the%20Lake%20Nakuru%20Getaway.">Enquire <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         </div>
       </article>
 
@@ -693,7 +764,7 @@
             <div class="pkg-duration">4 DAYS / 3 NIGHTS</div>
             <div class="pkg-price">From<br><b>KSh 220,000</b></div>
           </div>
-          <a class="pkg-link" href="https://wa.me/25479131446?text=Hi%20Safari%20Waves%2C%20I%27m%20interested%20in%20Uganda%20Gorilla%20Trekking.">Enquire <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a class="pkg-link" href="https://wa.me/254791314446?text=Hi%20Safari%20Waves%2C%20I%27m%20interested%20in%20Uganda%20Gorilla%20Trekking.">Enquire <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         </div>
       </article>
 
@@ -985,7 +1056,7 @@
           </div>
         </div>
         <div class="test-headline">Trip of a lifetime</div>
-        <p class="test quote">&ldquo;Gorilla trekking in Bwindi was the trip of a lifetime and every permit and detail was handled for us.&rdquo;</p>
+        <p class="test-quote">&ldquo;Gorilla trekking in Bwindi was the trip of a lifetime and every permit and detail was handled for us.&rdquo;</p>
         <div class="test-meta"><span>April 2026</span><span class="test-verified"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg>Verified guest</span></div>
       </div>
     </div>
@@ -1046,8 +1117,7 @@
       <div>
         <h4>CONTACT US</h4>
         <ul class="foot-contact">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg><a href="tel:+254700000000">+254 791314446</a></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg><a href="tel:+254711000000">+254 791314446</a></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg><a href="tel:+254791314446">+254 791314446</a></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="M22 6l-10 7L2 6"/></svg><a href="mailto:bookings@safariwavesafrica.com">bookings@safariwavesafrica.com</a></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20 15 15 0 0 1 0-20z"/></svg><a href="https://www.safariwavesafrica.com" target="_blank" rel="noopener">www.safariwavesafrica.com</a></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Nairobi, Kenya</span></li>
@@ -1134,6 +1204,7 @@
 
 </body>
 </html>
+
 
 
 
