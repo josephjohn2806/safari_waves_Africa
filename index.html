@@ -132,23 +132,23 @@
   .mobile-nav a{display:block;padding:17px 2px;font-size:19px;font-weight:700;color:#F1EADC;font-family:'Playfair Display',serif;}
   .mobile-nav .mn-cta{padding:6px 26px 34px;}
 
-  /* ---------- Hero (rotating slideshow, 10 slides) ---------- */
+  /* ---------- Hero (rotating slideshow, 13 slides) ---------- */
   .hero{position:relative;padding:0;overflow:hidden;color:#fff;}
   .hero-media{position:relative;min-height:660px;display:flex;align-items:flex-end;}
   /*
-    10 slides, 6s "slot" each => total loop T = 60s.
+    13 slides, 6s "slot" each => total loop T = 78s.
     Keyframe percentages are fractions of T:
-      fade-in ends at   0.72s -> 0.72/60  = 1.2%
-      hold ends at      5.40s -> 5.40/60  = 9%
-      fade-out ends at  6.48s -> 6.48/60  = 10.8%  (slight crossfade into next slide)
+      fade-in ends at   0.72s -> 0.72/78  = 0.92%
+      hold ends at      5.40s -> 5.40/78  = 6.92%
+      fade-out ends at  6.48s -> 6.48/78  = 8.31%  (slight crossfade into next slide)
     animation-delay is staggered in 6s steps so exactly one slide is visible at a time.
   */
   .hero-slide{
     position:absolute;inset:0;opacity:0;
-    animation:heroCycle 60s infinite;
+    animation:heroCycle 78s infinite;
   }
   .hero-slide img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0;
-    animation:kenburns 60s ease-in-out infinite;}
+    animation:kenburns 78s ease-in-out infinite;}
   .hero-slide:nth-child(1){animation-delay:0s;}
   .hero-slide:nth-child(2){animation-delay:6s;}
   .hero-slide:nth-child(3){animation-delay:12s;}
@@ -159,11 +159,14 @@
   .hero-slide:nth-child(8){animation-delay:42s;}
   .hero-slide:nth-child(9){animation-delay:48s;}
   .hero-slide:nth-child(10){animation-delay:54s;}
+  .hero-slide:nth-child(11){animation-delay:60s;}
+  .hero-slide:nth-child(12){animation-delay:66s;}
+  .hero-slide:nth-child(13){animation-delay:72s;}
   @keyframes heroCycle{
     0%{opacity:0;}
-    1.2%{opacity:1;}
-    9%{opacity:1;}
-    10.8%{opacity:0;}
+    0.92%{opacity:1;}
+    6.92%{opacity:1;}
+    8.31%{opacity:0;}
     100%{opacity:0;}
   }
   @keyframes kenburns{from{transform:scale(1.06);}to{transform:scale(1.16);}}
@@ -181,7 +184,7 @@
   .hero-pin svg{width:14px;height:14px;stroke:var(--gold);}
   .hero-headlines{position:relative;min-height:150px;}
   @media(max-width:640px){.hero-headlines{min-height:190px;}}
-  .hero-h{position:absolute;inset:0;opacity:0;animation:textCycle 60s infinite;}
+  .hero-h{position:absolute;inset:0;opacity:0;animation:textCycle 78s infinite;}
   .hero-h:nth-child(1){animation-delay:0s;}
   .hero-h:nth-child(2){animation-delay:6s;}
   .hero-h:nth-child(3){animation-delay:12s;}
@@ -192,11 +195,14 @@
   .hero-h:nth-child(8){animation-delay:42s;}
   .hero-h:nth-child(9){animation-delay:48s;}
   .hero-h:nth-child(10){animation-delay:54s;}
+  .hero-h:nth-child(11){animation-delay:60s;}
+  .hero-h:nth-child(12){animation-delay:66s;}
+  .hero-h:nth-child(13){animation-delay:72s;}
   @keyframes textCycle{
     0%{opacity:0;transform:translateY(8px);}
-    1.2%{opacity:1;transform:translateY(0);}
-    9%{opacity:1;transform:translateY(0);}
-    10.8%{opacity:0;transform:translateY(-8px);}
+    0.92%{opacity:1;transform:translateY(0);}
+    6.92%{opacity:1;transform:translateY(0);}
+    8.31%{opacity:0;transform:translateY(-8px);}
     100%{opacity:0;}
   }
   .hero h1{font-size:clamp(34px,6vw,54px);color:#fff;font-weight:800;}
@@ -505,6 +511,15 @@
     <div class="hero-slide">
       <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Skyline_of_Kampala.jpg?width=1600" alt="Kampala city skyline, Uganda">
     </div>
+    <div class="hero-slide">
+      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/African%20elephant.jpg?width=1600" alt="African elephant in the wild, one of the Big Five">
+    </div>
+    <div class="hero-slide">
+      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Streets%20of%20Stone%20town%2C%20Zanzibar.jpg?width=1600" alt="Narrow historic streets of Stone Town, Zanzibar">
+    </div>
+    <div class="hero-slide">
+      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Nungwi-Beach-Zanzibar.jpg?width=1600" alt="Nungwi beach town on Zanzibar's northern tip">
+    </div>
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <div class="wrap">
@@ -552,6 +567,18 @@
           <div class="hero-h">
             <h1>Explore Kampala.</h1>
             <p class="hero-sub">Uganda's lively capital, markets and culture make it a great gateway into the Pearl of Africa.</p>
+          </div>
+          <div class="hero-h">
+            <h1>Chase the Big Five.</h1>
+            <p class="hero-sub">Lion, leopard, elephant, buffalo and rhino, all within reach on a guided Kenya safari built around your dates.</p>
+          </div>
+          <div class="hero-h">
+            <h1>Wander Stone Town.</h1>
+            <p class="hero-sub">Narrow alleys, carved wooden doors and centuries of Swahili history in Zanzibar's UNESCO-listed old town.</p>
+          </div>
+          <div class="hero-h">
+            <h1>Zanzibar's Beach Towns.</h1>
+            <p class="hero-sub">From Nungwi's dhow harbour to the kite-surf lagoons of Paje, each coastal village has its own laid-back rhythm.</p>
           </div>
         </div>
         <div class="hero-ctas">
@@ -636,7 +663,7 @@
         <button class="pill" data-filter="family">Family &amp; groups</button>
       </div>
     </div>
-    <p class="pkg-count"><b id="pkgVisibleCount">14</b> packages across 3 countries</p>
+    <p class="pkg-count"><b id="pkgVisibleCount">17</b> packages across 3 countries</p>
 
     <div class="pkg-grid" id="pkgGrid">
 
@@ -685,6 +712,22 @@
             <div class="pkg-price">From<br><b>KSh 55,000</b></div>
           </div>
           <a class="pkg-link" href="https://wa.me/254791314446?text=Hi%20Safari%20Waves%2C%20I%27m%20interested%20in%20the%20Maasai%20Mara%20Safari.">Enquire <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+
+      <!-- Big Five Safari -->
+      <article class="pkg-card" data-cat="kenya">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/African%20elephant.jpg?width=800" alt="African elephant, part of the Big Five">
+        <span class="pkg-badge">Big Five</span>
+        <div class="pkg-body">
+          <div class="pkg-loc"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>MAASAI MARA &middot; KENYA</div>
+          <h3 class="pkg-title">Big Five Safari</h3>
+          <p class="pkg-includes">4x4 safari van transport, accommodation, all meals, guided game drives tracking lion, leopard, elephant, buffalo &amp; rhino, plus park fees.</p>
+          <div class="pkg-foot">
+            <div class="pkg-duration">4 DAYS / 3 NIGHTS</div>
+            <div class="pkg-price">From<br><b>KSh 90,000</b></div>
+          </div>
+          <a class="pkg-link" href="https://wa.me/254791314446?text=Hi%20Safari%20Waves%2C%20I%27m%20interested%20in%20the%20Big%20Five%20Safari.">Enquire <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         </div>
       </article>
 
@@ -832,6 +875,38 @@
         </div>
       </article>
 
+      <!-- Zanzibar Town & Stone Town Tour -->
+      <article class="pkg-card" data-cat="zanzibar">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Streets%20of%20Stone%20town%2C%20Zanzibar.jpg?width=800" alt="Historic streets of Stone Town, Zanzibar">
+        <span class="pkg-badge">Culture &amp; town</span>
+        <div class="pkg-body">
+          <div class="pkg-loc"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>ZANZIBAR TOWN &middot; TANZANIA</div>
+          <h3 class="pkg-title">Zanzibar Town &amp; Spice Tour</h3>
+          <p class="pkg-includes">Return flights, Stone Town accommodation, guided old town walk, spice farm tour, Forodhani Gardens sunset &amp; transfers.</p>
+          <div class="pkg-foot">
+            <div class="pkg-duration">3 DAYS / 2 NIGHTS</div>
+            <div class="pkg-price">From<br><b>KSh 95,000</b></div>
+          </div>
+          <a class="pkg-link" href="https://wa.me/254791314446?text=Hi%20Safari%20Waves%2C%20I%27m%20interested%20in%20the%20Zanzibar%20Town%20%26%20Spice%20Tour.">Enquire <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+
+      <!-- Zanzibar Beach Towns Hopper -->
+      <article class="pkg-card" data-cat="zanzibar beach">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Nungwi-Beach-Zanzibar.jpg?width=800" alt="Nungwi beach town, Zanzibar">
+        <span class="pkg-badge">Beach towns</span>
+        <div class="pkg-body">
+          <div class="pkg-loc"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>NUNGWI &amp; PAJE &middot; ZANZIBAR</div>
+          <h3 class="pkg-title">Zanzibar Beach Towns Hopper</h3>
+          <p class="pkg-includes">Return flights, accommodation split between Nungwi and Paje, transfers, sunset dhow cruise &amp; a day at leisure in each town.</p>
+          <div class="pkg-foot">
+            <div class="pkg-duration">6 DAYS / 5 NIGHTS</div>
+            <div class="pkg-price">From<br><b>KSh 140,000</b></div>
+          </div>
+          <a class="pkg-link" href="https://wa.me/254791314446?text=Hi%20Safari%20Waves%2C%20I%27m%20interested%20in%20the%20Zanzibar%20Beach%20Towns%20Hopper.">Enquire <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </article>
+
       <!-- Family of 4 -->
       <article class="pkg-card" data-cat="family kenya beach">
         <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Diani_Beach,_Mombasa,_Kenya.jpg?width=800" alt="Family beach holiday at the Kenya coast">
@@ -922,8 +997,8 @@
         <div class="dest-info"><span class="eyebrow">Coast</span><h3>Mombasa</h3><p>Sun, sand and sea on Kenya's stunning coastline.</p></div>
       </div>
       <div class="dest-card">
-        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/White_sandy_beach_at_Nungwi,_Zanzibar.jpg?width=900" alt="Zanzibar, Tanzania">
-        <div class="dest-info"><span class="eyebrow">Tanzania</span><h3>Zanzibar</h3><p>Exotic beaches, rich culture and historic Stone Town.</p></div>
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Streets%20of%20Stone%20town%2C%20Zanzibar.jpg?width=900" alt="Zanzibar Town, Tanzania">
+        <div class="dest-info"><span class="eyebrow">Tanzania</span><h3>Zanzibar Town &amp; Beaches</h3><p>Historic Stone Town streets, plus the beach towns of Nungwi, Paje and Pongwe.</p></div>
       </div>
       <div class="dest-card">
         <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Mountain_gorilla,_2-year-old,_Mubare_Group,_Buhoma,_Bwindi_Impenetrable_Forest,_Uganda.jpg?width=900" alt="Uganda">
@@ -1204,6 +1279,7 @@
 
 </body>
 </html>
+
 
 
 
